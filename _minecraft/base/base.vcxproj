@@ -169,6 +169,7 @@
     <ClCompile Include="..\src\ai\ElfSelector.cpp" />
     <ClCompile Include="..\src\ai\Multiply.cpp" />
     <ClCompile Include="..\src\ai\Parasite.cpp" />
+    <ClCompile Include="..\src\ai\ParasiteSelector.cpp" />
     <ClCompile Include="..\src\ai\Parasiting.cpp" />
     <ClCompile Include="..\src\ai\SelectorFactory.cpp" />
     <ClCompile Include="..\src\ai\ZergSelector.cpp" />

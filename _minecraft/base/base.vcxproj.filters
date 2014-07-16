@@ -487,6 +487,9 @@
     <ClCompile Include="..\src\ai\AIFactory.cpp">
       <Filter>ai</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\ai\ParasiteSelector.cpp">
+      <Filter>ai</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="engine">

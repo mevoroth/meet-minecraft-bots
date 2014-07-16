@@ -1,0 +1,268 @@
+ENGINE_INFO [000000] 2 arguments en ligne de commande.
+ENGINE_INFO [000000] Arg w mode fenetre.
+
+ENGINE_INFO [001623] 2014416 vertices in VBO
+ENGINE_INFO [000016] Building trimesh shape of 30024 vertices
+ENGINE_INFO [000312] Adding body 0x050E3870
+ENGINE_INFO [000000] Building trimesh shape of 21744 vertices
+ENGINE_INFO [000218] Adding body 0x050E4230
+ENGINE_INFO [000000] Building trimesh shape of 20988 vertices
+ENGINE_INFO [000218] Adding body 0x050E4C20
+ENGINE_INFO [000000] Building trimesh shape of 20700 vertices
+ENGINE_INFO [000188] Adding body 0x050E5610
+ENGINE_INFO [000015] Building trimesh shape of 17460 vertices
+ENGINE_INFO [000156] Adding body 0x050E5FF0
+ENGINE_INFO [000000] Building trimesh shape of 16452 vertices
+ENGINE_INFO [000187] Adding body 0x050E69F0
+ENGINE_INFO [000000] Building trimesh shape of 17064 vertices
+ENGINE_INFO [000156] Adding body 0x050E73E0
+ENGINE_INFO [000000] Building trimesh shape of 13356 vertices
+ENGINE_INFO [000125] Adding body 0x100E8250
+ENGINE_INFO [000000] Building trimesh shape of 20052 vertices
+ENGINE_INFO [000187] Adding body 0x100E8A40
+ENGINE_INFO [000000] Building trimesh shape of 28152 vertices
+ENGINE_INFO [000266] Adding body 0x103FF6A0
+ENGINE_INFO [000000] Building trimesh shape of 23364 vertices
+ENGINE_INFO [000218] Adding body 0x100E96F0
+ENGINE_INFO [000000] Building trimesh shape of 3024 vertices
+ENGINE_INFO [000016] Adding body 0x103AA420
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000171] Adding body 0x103AAD70
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000172] Adding body 0x100EA350
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000171] Adding body 0x100EAD40
+ENGINE_INFO [000000] Building trimesh shape of 18144 vertices
+ENGINE_INFO [000172] Adding body 0x100EB720
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000156] Adding body 0x100EC110
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000172] Adding body 0x100ECB30
+ENGINE_INFO [000000] Building trimesh shape of 16596 vertices
+ENGINE_INFO [000156] Adding body 0x0B223790
+ENGINE_INFO [000000] Building trimesh shape of 17100 vertices
+ENGINE_INFO [000156] Adding body 0x0B224070
+ENGINE_INFO [000000] Building trimesh shape of 24228 vertices
+ENGINE_INFO [000218] Adding body 0x0B224A50
+ENGINE_INFO [000016] Building trimesh shape of 24624 vertices
+ENGINE_INFO [000218] Adding body 0x0B225440
+ENGINE_INFO [000000] Building trimesh shape of 144 vertices
+ENGINE_INFO [000000] Adding body 0x0B2263B0
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000171] Adding body 0x0B2283C0
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000156] Adding body 0x0B228D20
+ENGINE_INFO [000016] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000156] Adding body 0x0B229700
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000171] Adding body 0x0A8F1CB0
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000156] Adding body 0x0A8F23F0
+ENGINE_INFO [000016] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000156] Adding body 0x0A8F2DE0
+ENGINE_INFO [000016] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000156] Adding body 0x0A8F37C0
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000171] Adding body 0x0A8F41B0
+ENGINE_INFO [000000] Building trimesh shape of 26028 vertices
+ENGINE_INFO [000250] Adding body 0x0A8F4B90
+ENGINE_INFO [000000] Building trimesh shape of 108 vertices
+ENGINE_INFO [000000] Adding body 0x0A8F65A0
+ENGINE_INFO [000000] Building trimesh shape of 24084 vertices
+ENGINE_INFO [000218] Adding body 0x0A8F6FC0
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000156] Adding body 0x0A8F79B0
+ENGINE_INFO [000016] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000171] Adding body 0x0A8F8390
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000156] Adding body 0x10568100
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000172] Adding body 0x10568890
+ENGINE_INFO [000016] Building trimesh shape of 18072 vertices
+ENGINE_INFO [000156] Adding body 0x10569280
+ENGINE_INFO [000000] Building trimesh shape of 17460 vertices
+ENGINE_INFO [000156] Adding body 0x10569C60
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000171] Adding body 0x1056A650
+ENGINE_INFO [000000] Building trimesh shape of 17856 vertices
+ENGINE_INFO [000156] Adding body 0x10DF8C70
+ENGINE_INFO [000000] Building trimesh shape of 576 vertices
+ENGINE_INFO [000016] Adding body 0x1082E210
+ENGINE_INFO [000000] Building trimesh shape of 21924 vertices
+ENGINE_INFO [000203] Adding body 0x1082EBF0
+ENGINE_INFO [000000] Building trimesh shape of 5724 vertices
+ENGINE_INFO [000046] Adding body 0x10E72650
+ENGINE_INFO [000000] Building trimesh shape of 22176 vertices
+ENGINE_INFO [000203] Adding body 0x1082F5E0
+ENGINE_INFO [000000] Building trimesh shape of 14580 vertices
+ENGINE_INFO [000125] Adding body 0x1082FFC0
+ENGINE_INFO [000016] Building trimesh shape of 13140 vertices
+ENGINE_INFO [000109] Adding body 0x108309B0
+ENGINE_INFO [000000] Building trimesh shape of 15912 vertices
+ENGINE_INFO [000140] Adding body 0x1056CDB0
+ENGINE_INFO [000000] Building trimesh shape of 16704 vertices
+ENGINE_INFO [000156] Adding body 0x1056D790
+ENGINE_INFO [000000] Building trimesh shape of 18324 vertices
+ENGINE_INFO [000172] Adding body 0x1056E180
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000171] Adding body 0x1056EB60
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000156] Adding body 0x1056F550
+ENGINE_INFO [000016] Building trimesh shape of 18396 vertices
+ENGINE_INFO [000156] Adding body 0x10B393E0
+ENGINE_INFO [000000] Building trimesh shape of 36 vertices
+ENGINE_INFO [000000] Adding body 0x10B3A410
+ENGINE_INFO [000000] Building trimesh shape of 20664 vertices
+ENGINE_INFO [000203] Adding body 0x10B3AE00
+ENGINE_INFO [000000] Building trimesh shape of 7380 vertices
+ENGINE_INFO [000062] Adding body 0x10B3B7E0
+ENGINE_INFO [000000] Building trimesh shape of 22716 vertices
+ENGINE_INFO [000203] Adding body 0x10B3C1D0
+ENGINE_INFO [000016] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000156] Adding body 0x10B3CBB0
+ENGINE_INFO [000015] Building trimesh shape of 16308 vertices
+ENGINE_INFO [000141] Adding body 0x10B3D5A0
+ENGINE_INFO [000000] Building trimesh shape of 17100 vertices
+ENGINE_INFO [000156] Adding body 0x10B3DF80
+ENGINE_INFO [000000] Building trimesh shape of 15372 vertices
+ENGINE_INFO [000124] Adding body 0x1104C2C0
+ENGINE_INFO [000016] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000156] Adding body 0x1104CC10
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000172] Adding body 0x113F4AD0
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000171] Adding body 0x113F54B0
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000156] Adding body 0x113F5FE0
+ENGINE_INFO [000016] Building trimesh shape of 23292 vertices
+ENGINE_INFO [000203] Adding body 0x113F69C0
+ENGINE_INFO [000000] Building trimesh shape of 2016 vertices
+ENGINE_INFO [000015] Adding body 0x113F73B0
+ENGINE_INFO [000000] Building trimesh shape of 22284 vertices
+ENGINE_INFO [000203] Adding body 0x1047A4A0
+ENGINE_INFO [000016] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000156] Adding body 0x1047AE80
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000171] Adding body 0x11176030
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000172] Adding body 0x117819F0
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000171] Adding body 0x11176CC0
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000172] Adding body 0x111776B0
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000156] Adding body 0x11178090
+ENGINE_INFO [000016] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000156] Adding body 0x117F26D0
+ENGINE_INFO [000000] Building trimesh shape of 14400 vertices
+ENGINE_INFO [000124] Adding body 0x117F30B0
+ENGINE_INFO [000016] Building trimesh shape of 4032 vertices
+ENGINE_INFO [000031] Adding body 0x117F3AA0
+ENGINE_INFO [000000] Building trimesh shape of 20808 vertices
+ENGINE_INFO [000203] Adding body 0x114EFA30
+ENGINE_INFO [000000] Building trimesh shape of 3852 vertices
+ENGINE_INFO [000031] Adding body 0x11247910
+ENGINE_INFO [000016] Building trimesh shape of 21528 vertices
+ENGINE_INFO [000234] Adding body 0x11248300
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000203] Adding body 0x11248CE0
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000171] Adding body 0x1145E850
+ENGINE_INFO [000016] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000171] Adding body 0x1145F240
+ENGINE_INFO [000016] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000187] Adding body 0x1145FC20
+ENGINE_INFO [000016] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000218] Adding body 0x110DD480
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000203] Adding body 0x110DDE70
+ENGINE_INFO [000000] Building trimesh shape of 17712 vertices
+ENGINE_INFO [000187] Adding body 0x110DE850
+ENGINE_INFO [000000] Building trimesh shape of 720 vertices
+ENGINE_INFO [000000] Adding body 0x110E0290
+ENGINE_INFO [000000] Building trimesh shape of 14940 vertices
+ENGINE_INFO [000141] Adding body 0x12F3CF20
+ENGINE_INFO [000000] Building trimesh shape of 3492 vertices
+ENGINE_INFO [000015] Adding body 0x11656740
+ENGINE_INFO [000016] Building trimesh shape of 24660 vertices
+ENGINE_INFO [000218] Adding body 0x11657130
+ENGINE_INFO [000000] Building trimesh shape of 396 vertices
+ENGINE_INFO [000000] Adding body 0x12FE1BE0
+ENGINE_INFO [000016] Building trimesh shape of 22320 vertices
+ENGINE_INFO [000203] Adding body 0x12CC1E60
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000171] Adding body 0x1308C700
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000172] Adding body 0x12CC2850
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000156] Adding body 0x12CC3230
+ENGINE_INFO [000015] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000156] Adding body 0x12CC3C20
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000172] Adding body 0x12CC4600
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000172] Adding body 0x12CC4FF0
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000171] Adding body 0x113128E0
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000156] Adding body 0x113132C0
+ENGINE_INFO [000016] Building trimesh shape of 22140 vertices
+ENGINE_INFO [000187] Adding body 0x11313CB0
+ENGINE_INFO [000016] Building trimesh shape of 31248 vertices
+ENGINE_INFO [000296] Adding body 0x11314690
+ENGINE_INFO [000000] Building trimesh shape of 25020 vertices
+ENGINE_INFO [000234] Adding body 0x11315080
+ENGINE_INFO [000000] Building trimesh shape of 23400 vertices
+ENGINE_INFO [000218] Adding body 0x11315A60
+ENGINE_INFO [000000] Building trimesh shape of 3816 vertices
+ENGINE_INFO [000032] Adding body 0x12F15A30
+ENGINE_INFO [000000] Building trimesh shape of 19800 vertices
+ENGINE_INFO [000187] Adding body 0x133C43C0
+ENGINE_INFO [000000] Building trimesh shape of 9504 vertices
+ENGINE_INFO [000078] Adding body 0x133C4DA0
+ENGINE_INFO [000000] Building trimesh shape of 21780 vertices
+ENGINE_INFO [000203] Adding body 0x133C5790
+ENGINE_INFO [000000] Building trimesh shape of 6948 vertices
+ENGINE_INFO [000062] Adding body 0x133C6170
+ENGINE_INFO [000000] Building trimesh shape of 25308 vertices
+ENGINE_INFO [000234] Adding body 0x133C6B60
+ENGINE_INFO [000000] Building trimesh shape of 1224 vertices
+ENGINE_INFO [000016] Adding body 0x1354F310
+ENGINE_INFO [000000] Building trimesh shape of 24084 vertices
+ENGINE_INFO [000218] Adding body 0x10339030
+ENGINE_INFO [000000] Building trimesh shape of 23364 vertices
+ENGINE_INFO [000218] Adding body 0x10339910
+ENGINE_INFO [000016] Building trimesh shape of 22032 vertices
+ENGINE_INFO [000203] Adding body 0x133C75B0
+ENGINE_INFO [000000] Building trimesh shape of 26568 vertices
+ENGINE_INFO [000249] Adding body 0x133C7FA0
+ENGINE_INFO [012683] remove body 0x10568100
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000203] Adding body 0x135E7DF0
+ENGINE_INFO [000000] remove body 0x108309B0
+ENGINE_INFO [000000] Building trimesh shape of 13140 vertices
+ENGINE_INFO [000125] Adding body 0x135E82A0
+ENGINE_INFO [000016] remove body 0x1056CDB0
+ENGINE_INFO [000000] Building trimesh shape of 15876 vertices
+ENGINE_INFO [000140] Adding body 0x135E87E0
+ENGINE_INFO [000016] remove body 0x1056D790
+ENGINE_INFO [000000] Building trimesh shape of 16704 vertices
+ENGINE_INFO [000156] Adding body 0x135E8DE0
+ENGINE_INFO [000000] remove body 0x10B3DF80
+ENGINE_INFO [000000] Building trimesh shape of 17100 vertices
+ENGINE_INFO [000171] Adding body 0x135E92F0
+ENGINE_INFO [000343] remove body 0x10568890
+ENGINE_INFO [000000] Building trimesh shape of 18432 vertices
+ENGINE_INFO [000219] Adding body 0x135E9880
+ENGINE_INFO [000000] remove body 0x135E87E0
+ENGINE_INFO [000000] Building trimesh shape of 15876 vertices
+ENGINE_INFO [000140] Adding body 0x135E9E20
+ENGINE_INFO [000016] remove body 0x135E8DE0
+ENGINE_INFO [000000] Building trimesh shape of 16668 vertices
+ENGINE_INFO [000171] Adding body 0x135EA420
+ENGINE_INFO [000000] remove body 0x1056E180
+ENGINE_INFO [000000] Building trimesh shape of 18324 vertices
+ENGINE_INFO [000172] Adding body 0x135EA920
+ENGINE_INFO [000000] remove body 0x1104C2C0
+ENGINE_INFO [000000] Building trimesh shape of 15372 vertices
+ENGINE_INFO [000156] Adding body 0x135EAFA0

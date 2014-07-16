@@ -1,0 +1,616 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\..\_engine\src\engine\render\renderer.cpp">
+      <Filter>engine\render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\engine\log\log.cpp">
+      <Filter>engine\log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\chunk.cpp" />
+    <ClCompile Include="..\src\basic_physic_engine.cpp" />
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\MiniCL\MiniCL.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\MiniCL\MiniCLTask\MiniCLTask.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\MiniCL\MiniCLTaskScheduler.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\LinearMath\btAlignedAllocator.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\LinearMath\btQuickprof.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\LinearMath\btConvexHull.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\LinearMath\btGeometryUtil.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\LinearMath\btSerializer.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletMultiThreaded\PosixThreadSupport.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletMultiThreaded\SpuSampleTaskProcess.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletMultiThreaded\Win32ThreadSupport.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletMultiThreaded\btParallelConstraintSolver.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletMultiThreaded\SpuCollisionObjectWrapper.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletMultiThreaded\SpuContactManifoldCollisionAlgorithm.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletMultiThreaded\SpuCollisionTaskProcess.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletMultiThreaded\SpuLibspe2Support.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletMultiThreaded\SpuFakeDma.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletMultiThreaded\SpuGatheringCollisionDispatcher.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletMultiThreaded\btThreadSupportInterface.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletMultiThreaded\SpuSampleTask\SpuSampleTask.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletMultiThreaded\btGpu3DGridBroadphase.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletMultiThreaded\GpuSoftBodySolvers\CPU\btSoftBodySolver_CPU.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletMultiThreaded\GpuSoftBodySolvers\OpenCL\MiniCL\MiniCLTaskWrap.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletMultiThreaded\SequentialThreadSupport.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletMultiThreaded\SpuNarrowPhaseCollisionTask\boxBoxDistance.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletMultiThreaded\SpuNarrowPhaseCollisionTask\SpuMinkowskiPenetrationDepthSolver.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletMultiThreaded\SpuNarrowPhaseCollisionTask\SpuCollisionShapes.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletMultiThreaded\SpuNarrowPhaseCollisionTask\SpuContactResult.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletMultiThreaded\SpuNarrowPhaseCollisionTask\SpuGatheringCollisionTask.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionDispatch\btBoxBoxDetector.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionDispatch\btCollisionWorld.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionDispatch\btConvexPlaneCollisionAlgorithm.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionDispatch\btUnionFind.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionDispatch\btBoxBoxCollisionAlgorithm.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionDispatch\btCollisionObject.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionDispatch\btInternalEdgeUtility.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionDispatch\btManifoldResult.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionDispatch\btActivatingCollisionAlgorithm.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionDispatch\btEmptyCollisionAlgorithm.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionDispatch\btSphereBoxCollisionAlgorithm.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionDispatch\btCollisionDispatcher.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionDispatch\btCompoundCollisionAlgorithm.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionDispatch\btSimulationIslandManager.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionDispatch\btBox2dBox2dCollisionAlgorithm.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionDispatch\btSphereTriangleCollisionAlgorithm.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionDispatch\btConvexConvexAlgorithm.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionDispatch\btDefaultCollisionConfiguration.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionDispatch\btConvexConcaveCollisionAlgorithm.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionDispatch\btSphereSphereCollisionAlgorithm.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionDispatch\SphereTriangleDetector.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionDispatch\btConvex2dConvex2dAlgorithm.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionDispatch\btGhostObject.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\NarrowPhaseCollision\btContinuousConvexCollision.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\NarrowPhaseCollision\btGjkEpaPenetrationDepthSolver.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\NarrowPhaseCollision\btMinkowskiPenetrationDepthSolver.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\NarrowPhaseCollision\btConvexCast.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\NarrowPhaseCollision\btGjkEpa2.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\NarrowPhaseCollision\btGjkPairDetector.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\NarrowPhaseCollision\btRaycastCallback.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\NarrowPhaseCollision\btSubSimplexConvexCast.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\NarrowPhaseCollision\btVoronoiSimplexSolver.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\NarrowPhaseCollision\btGjkConvexCast.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\NarrowPhaseCollision\btPersistentManifold.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\Gimpact\btGenericPoolAllocator.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\Gimpact\btGImpactShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\Gimpact\btGImpactBvh.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\Gimpact\btTriangleShapeEx.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\Gimpact\gim_contact.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\Gimpact\gim_memory.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\Gimpact\btContactProcessing.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\Gimpact\btGImpactCollisionAlgorithm.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\Gimpact\gim_box_set.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\Gimpact\btGImpactQuantizedBvh.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\Gimpact\gim_tri_collision.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\BroadphaseCollision\btCollisionAlgorithm.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\BroadphaseCollision\btDbvt.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\BroadphaseCollision\btQuantizedBvh.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\BroadphaseCollision\btAxisSweep3.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\BroadphaseCollision\btDbvtBroadphase.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\BroadphaseCollision\btDispatcher.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\BroadphaseCollision\btMultiSapBroadphase.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\BroadphaseCollision\btOverlappingPairCache.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\BroadphaseCollision\btSimpleBroadphase.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\BroadphaseCollision\btBroadphaseProxy.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btCompoundShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btPolyhedralConvexShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btStaticPlaneShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btTriangleIndexVertexArray.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btBoxShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btCapsuleShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btConvex2dShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btHeightfieldTerrainShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btMinkowskiSumShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btMultiSphereShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btStridingMeshInterface.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btTriangleMesh.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btBvhTriangleMeshShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btConvexTriangleMeshShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btShapeHull.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btTriangleBuffer.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btCollisionShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btConeShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btTriangleIndexVertexMaterialArray.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btTriangleMeshShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btBox2dShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btConvexInternalShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btConvexPointCloudShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btCylinderShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btMultimaterialTriangleMeshShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btTetrahedronShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btTriangleCallback.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btSphereShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btOptimizedBvh.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btUniformScalingShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btConcaveShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btConvexShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btEmptyShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btScaledBvhTriangleMeshShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\CollisionShapes\btConvexHullShape.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletSoftBody\btDefaultSoftBodySolver.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletSoftBody\btSoftBody.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletSoftBody\btSoftBodyRigidBodyCollisionConfiguration.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletSoftBody\btSoftRigidDynamicsWorld.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletSoftBody\btSoftSoftCollisionAlgorithm.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletSoftBody\btSoftBodyHelpers.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletSoftBody\btSoftRigidCollisionAlgorithm.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletSoftBody\btSoftBodyConcaveCollisionAlgorithm.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletDynamics\Character\btKinematicCharacterController.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletDynamics\Dynamics\btContinuousDynamicsWorld.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletDynamics\Dynamics\btDiscreteDynamicsWorld.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletDynamics\Dynamics\btRigidBody.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletDynamics\Dynamics\btSimpleDynamicsWorld.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletDynamics\Dynamics\Bullet-C-API.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletDynamics\Vehicle\btRaycastVehicle.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletDynamics\Vehicle\btWheelInfo.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletDynamics\ConstraintSolver\btContactConstraint.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletDynamics\ConstraintSolver\btGeneric6DofConstraint.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletDynamics\ConstraintSolver\btHingeConstraint.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletDynamics\ConstraintSolver\btPoint2PointConstraint.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletDynamics\ConstraintSolver\btSliderConstraint.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletDynamics\ConstraintSolver\btTypedConstraint.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletDynamics\ConstraintSolver\btConeTwistConstraint.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletDynamics\ConstraintSolver\btGeneric6DofSpringConstraint.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletDynamics\ConstraintSolver\btHinge2Constraint.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletDynamics\ConstraintSolver\btSolve2LinearConstraint.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletDynamics\ConstraintSolver\btUniversalConstraint.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletDynamics\ConstraintSolver\btSequentialImpulseConstraintSolver.cpp">
+      <Filter>engine\external\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\actors\Hunter.cpp">
+      <Filter>actors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ai\BehaviorTree.cpp">
+      <Filter>ai</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ai\ElfSelector.cpp">
+      <Filter>ai</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ai\SelectorFactory.cpp">
+      <Filter>ai</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ai\ZergSelector.cpp">
+      <Filter>ai</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ai\Parasiting.cpp">
+      <Filter>ai</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ai\Parasite.cpp">
+      <Filter>ai</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ai\Multiply.cpp">
+      <Filter>ai</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ai\Condition.cpp">
+      <Filter>ai</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\actors\ActorsRepository.cpp">
+      <Filter>actors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\actors\ParasiteActor.cpp">
+      <Filter>actors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ai\AIFactory.cpp">
+      <Filter>ai</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="engine">
+      <UniqueIdentifier>{ae4e05d4-a1d7-4a08-b636-e63623fdf46f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="engine\render">
+      <UniqueIdentifier>{a376097d-3850-4557-a4c2-fca1449830df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="engine\log">
+      <UniqueIdentifier>{0a822301-530a-4ea3-9539-50b080a3d8da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="engine\external">
+      <UniqueIdentifier>{2ce99546-5a7d-4b69-aab0-3ced397b40f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="engine\external\bullet">
+      <UniqueIdentifier>{bc4798d1-b19d-4c48-a90d-707f6d28a47e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="actors">
+      <UniqueIdentifier>{913fc892-bf0c-4806-861a-d63efeeb6df6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ai">
+      <UniqueIdentifier>{4b7238db-bbc6-4c6c-aafe-8cda6e39436b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pathfinding">
+      <UniqueIdentifier>{612655bf-7419-4348-bc1c-027ec4846b3e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\_engine\src\engine\render\renderer.h">
+      <Filter>engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_engine\src\engine\log\log.h">
+      <Filter>engine\log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_engine\src\engine\log\log_console.h">
+      <Filter>engine\log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_engine\src\engine\log\log_file.h">
+      <Filter>engine\log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\chunk.h" />
+    <ClInclude Include="..\src\cube.h" />
+    <ClInclude Include="..\src\world.h" />
+    <ClInclude Include="..\src\avatar.h" />
+    <ClInclude Include="..\src\my_physics.h" />
+    <ClInclude Include="..\src\basic_physic_engine.h" />
+    <ClInclude Include="..\..\_engine\src\engine\render\camera.h">
+      <Filter>engine\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\Behavior.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\BehaviorTree.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\Eat.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\ElfSelector.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\Group.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\HunterSelector.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\Move.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\Multiply.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\ParasiteSelector.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\Seek.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\Selector.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\SelectorFactory.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\Separate.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\Teleport.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\actors\Hunter.hpp">
+      <Filter>actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\actors\Actor.hpp">
+      <Filter>actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\ZergSelector.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\ZergMultiply.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\Parasiting.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\actors\types.hpp" />
+    <ClInclude Include="..\src\ai\Multiplyable.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\Parasite.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\Condition.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\actors\ActorsRepository.hpp">
+      <Filter>actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\actors\ParasiteActor.hpp">
+      <Filter>actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\AIFactory.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

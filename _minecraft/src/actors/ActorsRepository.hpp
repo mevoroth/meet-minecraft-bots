@@ -4,6 +4,7 @@
 #include <list>
 #include "Actor.hpp"
 #include "ParasiteActor.hpp"
+#include "ElfActor.hpp"
 
 using namespace std;
 
@@ -24,6 +25,8 @@ namespace DatNS
 
 		Actor* createParasite(ParasiteActor& actor);
 		void removeParasite(ParasiteActor* actor);
+
+		list<ElfActor*> getElves();
 	};
 }
 

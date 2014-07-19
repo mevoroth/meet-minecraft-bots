@@ -1,14 +1,16 @@
-#ifndef _TELEPORT_HPP_
-#define _TELEPORT_HPP_
+#ifndef _PARASITING_CONDITION_HPP_
+#define _PARASITING_CONDITION_HPP_
 
-#include "Behavior.hpp"
+#include "Condition.hpp"
 
 namespace DatNS
 {
-	class Teleport : public Behavior
+	class ParasitingCondition : public Condition
 	{
+	protected:
+		virtual bool _execute_condition(Actor& actor);
 	public:
-		virtual ReturnCode update(Actor& actor);
+		static const double FOV;
 
 		virtual void onFinished(Actor& actor) {};
 		virtual void onStarted(Actor& actor) {};

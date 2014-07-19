@@ -1,11 +1,11 @@
-#ifndef _TELEPORT_HPP_
-#define _TELEPORT_HPP_
+#ifndef _FIND_HPP_
+#define _FIND_HPP_
 
 #include "Behavior.hpp"
 
 namespace DatNS
 {
-	class Teleport : public Behavior
+	class Find : public Behavior
 	{
 	public:
 		virtual ReturnCode update(Actor& actor);

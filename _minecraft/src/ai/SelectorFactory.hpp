@@ -7,6 +7,8 @@ namespace DatNS
 {
 	class SelectorFactory
 	{
+	private:
+		SelectorFactory() {}
 	public:
 		static Selector* getElfSelector();
 		static Selector* getZergSelector();

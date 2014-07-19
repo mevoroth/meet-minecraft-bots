@@ -487,7 +487,7 @@
     <ClCompile Include="..\src\ai\AIFactory.cpp">
       <Filter>ai</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\ai\ParasiteSelector.cpp">
+    <ClCompile Include="..\src\ai\ParasitingCondition.cpp">
       <Filter>ai</Filter>
     </ClCompile>
   </ItemGroup>
@@ -563,9 +563,6 @@
     <ClInclude Include="..\src\ai\Multiply.hpp">
       <Filter>ai</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\ai\ParasiteSelector.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\ai\Seek.hpp">
       <Filter>ai</Filter>
     </ClInclude>
@@ -613,6 +610,21 @@
       <Filter>actors</Filter>
     </ClInclude>
     <ClInclude Include="..\src\ai\AIFactory.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\ParasitingCondition.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\actors\ElfActor.hpp">
+      <Filter>actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\SequenceBehavior.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\Find.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\FindRandomDirection.hpp">
       <Filter>ai</Filter>
     </ClInclude>
   </ItemGroup>

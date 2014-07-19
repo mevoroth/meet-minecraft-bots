@@ -9,12 +9,12 @@ namespace DatNS
 	{
 	private:
 		static AIFactory* _inst;
-		BehaviorTree* _parasiteAI;
+		BehaviorTree* _zergAI;
 
 		AIFactory();
 	public:
 		static AIFactory* get();
-		const BehaviorTree* createParasiteAI();
+		const BehaviorTree* createZergAI();
 	};
 }
 

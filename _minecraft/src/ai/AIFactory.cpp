@@ -1,6 +1,6 @@
 #include "AIFactory.hpp"
 
-#include "ParasiteSelector.hpp"
+#include "SelectorFactory.hpp"
 
 using namespace DatNS;
 
@@ -14,36 +14,13 @@ AIFactory* AIFactory::get()
 {
 
 }
-const BehaviorTree* AIFactory::createParasiteAI()
+const BehaviorTree* AIFactory::createZergAI()
 {
-	if (!_parasiteAI)
+	if (!_zergAI)
 	{
-		Behavior* behavior;
-		Behavior* behaviorSub;
-
-		_parasiteAI = new BehaviorTree();
+		_zergAI = new BehaviorTree();
 		
-		ParasiteSelector* parasiteSel = new ParasiteSelector();
-
-		behavior = new ParasitingBehavior();
-		behavior->addSubBehavior(new ParasitingCondition());
-		behavior->addSubBehavior(new Parasiting());
-		behavior->addSubBehavior(new Multiply());
-		parasiteSel->addBehavior(behavior);
-
-		behavior = new HuntBehavior();
-
-		behaviorSub = new Find();
-		behavior->addSubBehavior(behaviorSub);
-
-		behaviorSub = new MoveRandomly();
-		behaviorSub->addSubBehavior(new FindRandomDirection());
-		behaviorSub->addSubBehavior(new Teleport());
-		behavior->addSubBehavior(behaviorSub);
-
-		parasiteSel->addBehavior(behavior);
-
-		_parasiteAI->setSelector(parasiteSel);
+		_zergAI->setSelector(SelectorFactory::getZergSelector());
 	}
-	return _parasiteAI;
+	return _zergAI;
 }

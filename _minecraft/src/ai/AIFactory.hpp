@@ -10,7 +10,7 @@ namespace DatNS
 	private:
 		static AIFactory* _inst;
 		BehaviorTree* _zergAI;
-
+		~AIFactory();
 		AIFactory();
 	public:
 		static AIFactory* get();

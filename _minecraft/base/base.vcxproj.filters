@@ -481,15 +481,22 @@
     <ClCompile Include="..\src\actors\ActorsRepository.cpp">
       <Filter>actors</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\actors\ParasiteActor.cpp">
-      <Filter>actors</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\ai\AIFactory.cpp">
       <Filter>ai</Filter>
     </ClCompile>
     <ClCompile Include="..\src\ai\ParasitingCondition.cpp">
       <Filter>ai</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\utils\types_extended.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ai\FindRandomDirection.cpp">
+      <Filter>ai</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\actors\ZergActor.cpp">
+      <Filter>actors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\OurMinecraft.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="engine">
@@ -515,6 +522,9 @@
     </Filter>
     <Filter Include="pathfinding">
       <UniqueIdentifier>{612655bf-7419-4348-bc1c-027ec4846b3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{99e62944-c3f1-4211-ab82-2c82a1f793cc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -587,9 +597,6 @@
     <ClInclude Include="..\src\ai\ZergSelector.hpp">
       <Filter>ai</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\ai\ZergMultiply.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\ai\Parasiting.hpp">
       <Filter>ai</Filter>
     </ClInclude>
@@ -604,9 +611,6 @@
       <Filter>ai</Filter>
     </ClInclude>
     <ClInclude Include="..\src\actors\ActorsRepository.hpp">
-      <Filter>actors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\actors\ParasiteActor.hpp">
       <Filter>actors</Filter>
     </ClInclude>
     <ClInclude Include="..\src\ai\AIFactory.hpp">
@@ -627,5 +631,15 @@
     <ClInclude Include="..\src\ai\FindRandomDirection.hpp">
       <Filter>ai</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\utils\types_extended.hpp">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\RandomDirectionStore.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\actors\ZergActor.hpp">
+      <Filter>actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\OurMinecraft.hpp" />
   </ItemGroup>
 </Project>

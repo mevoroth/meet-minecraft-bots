@@ -162,11 +162,12 @@
     <ClCompile Include="..\..\_engine\src\external\bullet\src\MiniCL\MiniCLTask\MiniCLTask.cpp" />
     <ClCompile Include="..\src\actors\ActorsRepository.cpp" />
     <ClCompile Include="..\src\actors\Hunter.cpp" />
-    <ClCompile Include="..\src\actors\ParasiteActor.cpp" />
+    <ClCompile Include="..\src\actors\ZergActor.cpp" />
     <ClCompile Include="..\src\ai\AIFactory.cpp" />
     <ClCompile Include="..\src\ai\BehaviorTree.cpp" />
     <ClCompile Include="..\src\ai\Condition.cpp" />
     <ClCompile Include="..\src\ai\ElfSelector.cpp" />
+    <ClCompile Include="..\src\ai\FindRandomDirection.cpp" />
     <ClCompile Include="..\src\ai\Multiply.cpp" />
     <ClCompile Include="..\src\ai\Parasite.cpp" />
     <ClCompile Include="..\src\ai\Parasiting.cpp" />
@@ -176,6 +177,8 @@
     <ClCompile Include="..\src\basic_physic_engine.cpp" />
     <ClCompile Include="..\src\chunk.cpp" />
     <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\OurMinecraft.cpp" />
+    <ClCompile Include="..\src\utils\types_extended.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\_engine\src\engine\log\log.h" />
@@ -187,7 +190,7 @@
     <ClInclude Include="..\src\actors\ActorsRepository.hpp" />
     <ClInclude Include="..\src\actors\ElfActor.hpp" />
     <ClInclude Include="..\src\actors\Hunter.hpp" />
-    <ClInclude Include="..\src\actors\ParasiteActor.hpp" />
+    <ClInclude Include="..\src\actors\ZergActor.hpp" />
     <ClInclude Include="..\src\actors\types.hpp" />
     <ClInclude Include="..\src\ai\AIFactory.hpp" />
     <ClInclude Include="..\src\ai\Behavior.hpp" />
@@ -205,19 +208,21 @@
     <ClInclude Include="..\src\ai\Parasite.hpp" />
     <ClInclude Include="..\src\ai\Parasiting.hpp" />
     <ClInclude Include="..\src\ai\ParasitingCondition.hpp" />
+    <ClInclude Include="..\src\ai\RandomDirectionStore.hpp" />
     <ClInclude Include="..\src\ai\Seek.hpp" />
     <ClInclude Include="..\src\ai\Selector.hpp" />
     <ClInclude Include="..\src\ai\SelectorFactory.hpp" />
     <ClInclude Include="..\src\ai\Separate.hpp" />
     <ClInclude Include="..\src\ai\SequenceBehavior.hpp" />
     <ClInclude Include="..\src\ai\Teleport.hpp" />
-    <ClInclude Include="..\src\ai\ZergMultiply.hpp" />
     <ClInclude Include="..\src\ai\ZergSelector.hpp" />
     <ClInclude Include="..\src\avatar.h" />
     <ClInclude Include="..\src\basic_physic_engine.h" />
     <ClInclude Include="..\src\chunk.h" />
     <ClInclude Include="..\src\cube.h" />
     <ClInclude Include="..\src\my_physics.h" />
+    <ClInclude Include="..\src\OurMinecraft.hpp" />
+    <ClInclude Include="..\src\utils\types_extended.hpp" />
     <ClInclude Include="..\src\world.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

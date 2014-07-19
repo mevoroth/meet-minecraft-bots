@@ -1,5 +1,5 @@
-#ifndef _PARASITE_ACTOR_HPP_
-#define _PARASITE_ACTOR_HPP_
+#ifndef _ZERG_ACTOR_HPP_
+#define _ZERG_ACTOR_HPP_
 
 #include "Actor.hpp"
 
@@ -9,7 +9,7 @@
 
 namespace DatNS
 {
-	class ParasiteActor
+	class ZergActor
 		: public Actor,
 		public Multiplyable,
 		public Parasite

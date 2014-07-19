@@ -8,7 +8,7 @@ namespace DatNS
 	class RandomDirectionStore
 	{
 	public:
-		virtual void storeRandomDirection(const NYVert3Df& dir) = 0;
+		virtual void store(const NYVert3Df& dir) = 0;
 	};
 }
 

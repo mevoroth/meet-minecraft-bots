@@ -1,15 +1,10 @@
-#include "ParasiteActor.hpp"
+#include "ZergActor.hpp"
 
 #include "ActorsRepository.hpp"
 
 using namespace DatNS;
 
-void ParasiteActor::multiply()
+void ZergActor::multiply()
 {
 	ActorsRepository::get()->createParasite(*this);
-}
-
-void ParasiteActor::multiply()
-{
-
 }

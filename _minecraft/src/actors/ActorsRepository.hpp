@@ -3,7 +3,7 @@
 
 #include <list>
 #include "Actor.hpp"
-#include "ParasiteActor.hpp"
+#include "ZergActor.hpp"
 #include "ElfActor.hpp"
 
 using namespace std;
@@ -15,16 +15,17 @@ namespace DatNS
 	private:
 		static ActorsRepository* _inst;
 
-		list<ParasiteActor*> _parasites;
+		list<ZergActor*> _parasites;
 
 		ActorsRepository();
 	public:
+		enum { START_PARASITE = 10 };
 		static ActorsRepository* get();
 		void insert(Actor* actor);
-		void insert(ParasiteActor* actor);
+		void insert(ZergActor* actor);
 
-		Actor* createParasite(ParasiteActor& actor);
-		void removeParasite(ParasiteActor* actor);
+		Actor* createParasite();
+		void removeParasite(ZergActor* actor);
 
 		list<ElfActor*> getElves();
 	};

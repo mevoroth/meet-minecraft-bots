@@ -21,20 +21,19 @@ void ActorsRepository::insert(Actor* actor)
 	
 }
 
-void ActorsRepository::insert(ParasiteActor* actor)
+void ActorsRepository::insert(ZergActor* actor)
 {
 	_parasites.push_back(actor);
 }
 
-Actor* ActorsRepository::createParasite(ParasiteActor& actor)
+Actor* ActorsRepository::createParasite()
 {
-	ParasiteActor* parasite = new ParasiteActor();
-	throw std::exception("NOT FULLY IMPLEMENTED!");
+	ZergActor* parasite = new ZergActor();
 	insert(parasite);
 	return parasite;
 }
 
-void ActorsRepository::removeParasite(ParasiteActor* actor)
+void ActorsRepository::removeParasite(ZergActor* actor)
 {
 	_parasites.remove(actor);
 	delete actor;

@@ -8,6 +8,7 @@
 #include "Multiply.hpp"
 #include "Teleport.hpp"
 #include "Find.hpp"
+#include "FindRandomDirection.hpp"
 
 using namespace DatNS;
 

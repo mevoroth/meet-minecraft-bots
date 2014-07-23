@@ -28,7 +28,14 @@ void ActorsRepository::insert(ZergActor* actor)
 
 Actor* ActorsRepository::createParasite()
 {
-	ZergActor* parasite = new ZergActor();
+	ZergActor* parasite = new ZergActor(NYVert3Df(0, 0, 0), NYVert3Df(0, 0, 0), NYVert3Df(0, 0, 0));
+	insert(parasite);
+	return parasite;
+}
+
+Actor* ActorsRepository::createParasite(const Actor& src)
+{
+	ZergActor* parasite = new ZergActor(NYVert3Df(0, 0, 0), NYVert3Df(0, 0, 0), NYVert3Df(0, 0, 0));
 	insert(parasite);
 	return parasite;
 }
@@ -37,4 +44,9 @@ void ActorsRepository::removeParasite(ZergActor* actor)
 {
 	_parasites.remove(actor);
 	delete actor;
+}
+
+list<ElfActor*> ActorsRepository::getElves()
+{
+	return list<ElfActor*>();
 }

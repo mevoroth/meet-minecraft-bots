@@ -1,7 +1,7 @@
 #ifndef _PARASITE_HPP_
 #define _PARASITE_HPP_
 
-#include "types.hpp"
+#include <cstdint>
 
 namespace DatNS
 {

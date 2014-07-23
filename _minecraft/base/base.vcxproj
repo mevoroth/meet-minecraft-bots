@@ -160,6 +160,7 @@
     <ClCompile Include="..\..\_engine\src\external\bullet\src\MiniCL\MiniCL.cpp" />
     <ClCompile Include="..\..\_engine\src\external\bullet\src\MiniCL\MiniCLTaskScheduler.cpp" />
     <ClCompile Include="..\..\_engine\src\external\bullet\src\MiniCL\MiniCLTask\MiniCLTask.cpp" />
+    <ClCompile Include="..\src\actors\Actor.cpp" />
     <ClCompile Include="..\src\actors\ActorsRepository.cpp" />
     <ClCompile Include="..\src\actors\Hunter.cpp" />
     <ClCompile Include="..\src\actors\ZergActor.cpp" />
@@ -239,7 +240,7 @@
     <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>

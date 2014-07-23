@@ -4,7 +4,7 @@
 
 using namespace DatNS;
 
-void init()
+void DatNS::init()
 {
 	// Create Parasite
 	for (int i = 0; i < ActorsRepository::START_PARASITE; ++i)
@@ -13,7 +13,7 @@ void init()
 	}
 }
 
-void update()
+void DatNS::update()
 {
 
 }

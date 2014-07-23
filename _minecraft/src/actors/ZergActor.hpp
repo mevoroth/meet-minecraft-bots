@@ -15,6 +15,7 @@ namespace DatNS
 		public Parasite
 	{
 	public:
+		ZergActor(const NYVert3Df& pos, const NYVert3Df& speed, const NYVert3Df& rot);
 		void multiply();
 		void update();
 	};

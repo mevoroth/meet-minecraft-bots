@@ -25,6 +25,7 @@ namespace DatNS
 		void insert(ZergActor* actor);
 
 		Actor* createParasite();
+		Actor* createParasite(const Actor& actor);
 		void removeParasite(ZergActor* actor);
 
 		list<ElfActor*> getElves();

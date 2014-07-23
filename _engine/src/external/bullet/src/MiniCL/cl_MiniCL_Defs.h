@@ -250,15 +250,15 @@ static float min(float a, float b)
 	return (a <= b) ? a : b;
 }
 
-static float fmax(float a, float b) 
-{
-	return (a >= b) ? a : b;
-}
-
-static float fmin(float a, float b) 
-{
-	return (a <= b) ? a : b;
-}
+//static float fmax(float a, float b) 
+//{
+//	return (a >= b) ? a : b;
+//}
+//
+//static float fmin(float a, float b) 
+//{
+//	return (a <= b) ? a : b;
+//}
 
 struct int2
 {

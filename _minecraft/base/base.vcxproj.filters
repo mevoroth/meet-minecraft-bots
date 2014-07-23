@@ -497,6 +497,9 @@
       <Filter>actors</Filter>
     </ClCompile>
     <ClCompile Include="..\src\OurMinecraft.cpp" />
+    <ClCompile Include="..\src\actors\Actor.cpp">
+      <Filter>actors</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="engine">

@@ -3,6 +3,8 @@
 
 #include "engine\utils\types_3d.h"
 
-NYVert3Df eulerToDirection(const NYVert3Df& euler);
+const NYVert3Df FORWARD = NYVert3Df(0, 0, 1);
+const NYVert3Df RIGHT = NYVert3Df(1, 0, 0);
+const NYVert3Df UP = NYVert3Df(0, 1, 0);
 
 #endif

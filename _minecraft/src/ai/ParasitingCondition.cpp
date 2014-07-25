@@ -14,9 +14,9 @@ bool ParasitingCondition::_execute_condition(Actor& actor)
 		it != elves.cend();
 		++it)
 	{
-		NYVert3Df fw = (*it)->getForward();
+		NYVert3Df fw((*it)->Forward());
 		float dot = fw.scalProd(((*it)->Position() - actor.Position()).normalize());
-		if (dot > 0.8f)
+		if (dot > FOV)
 		{
 			return true;
 		}

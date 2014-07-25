@@ -487,9 +487,6 @@
     <ClCompile Include="..\src\ai\ParasitingCondition.cpp">
       <Filter>ai</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\utils\types_extended.cpp">
-      <Filter>utils</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\ai\FindRandomDirection.cpp">
       <Filter>ai</Filter>
     </ClCompile>
@@ -499,6 +496,9 @@
     <ClCompile Include="..\src\OurMinecraft.cpp" />
     <ClCompile Include="..\src\actors\Actor.cpp">
       <Filter>actors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utils\types_extended.cpp">
+      <Filter>utils</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -634,9 +634,6 @@
     <ClInclude Include="..\src\ai\FindRandomDirection.hpp">
       <Filter>ai</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\utils\types_extended.hpp">
-      <Filter>utils</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\ai\RandomDirectionStore.hpp">
       <Filter>ai</Filter>
     </ClInclude>
@@ -644,5 +641,8 @@
       <Filter>actors</Filter>
     </ClInclude>
     <ClInclude Include="..\src\OurMinecraft.hpp" />
+    <ClInclude Include="..\src\utils\types_extended.hpp">
+      <Filter>utils</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

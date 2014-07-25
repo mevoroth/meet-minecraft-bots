@@ -19,12 +19,20 @@ namespace DatNS
 
 		ActorsRepository();
 	public:
-		enum { START_PARASITE = 10 };
+		enum {
+			START_PARASITES	= 10,
+			START_BUSHES	= 10,
+			START_ELVES		= 10,
+			START_HUNTERS	= 10
+		};
 		static ActorsRepository* get();
 		void insert(Actor* actor);
 		void insert(ZergActor* actor);
 
 		Actor* createParasite();
+		Actor* createBush();
+		Actor* createElf();
+		Actor* createHunter();
 		Actor* createParasite(const Actor& actor);
 		void removeParasite(ZergActor* actor);
 

@@ -14,10 +14,14 @@ namespace DatNS
 	public:
 		Actor(const NYVert3Df& pos, const NYVert3Df& speed, const NYVert3Df& rotation);
 		NYVert3Df& Position() { return _pos; };
+		NYVert3Df getPosition() const { return _pos; };
 		NYVert3Df& Speed() { return _speed; };
+		NYVert3Df getSpeed() const { return _speed; };
 		NYVert3Df& Forward() { return _fw; };
+		NYVert3Df getForward() const { return _fw; };
 
 		virtual void update() = 0;
+		virtual void render() = 0;
 	};
 };
 

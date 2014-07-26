@@ -18,3 +18,13 @@ void ZergActor::update()
 {
 
 }
+
+void ZergActor::render()
+{
+
+}
+
+void ZergActor::reset()
+{
+
+}

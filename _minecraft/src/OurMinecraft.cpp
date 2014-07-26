@@ -14,21 +14,26 @@ void DatNS::init()
 
 	for (int i = 0; i < ActorsRepository::START_ELVES; ++i)
 	{
-		ActorsRepository::get()->createElves();
+		ActorsRepository::get()->createElf();
 	}
 
 	for (int i = 0; i < ActorsRepository::START_BUSHES; ++i)
 	{
-		ActorsRepository::get()->createBushes();
+		ActorsRepository::get()->createBush();
 	}
 
-	for (int i = 0; i < ActorsRepository::START_ELVES; ++i)
+	for (int i = 0; i < ActorsRepository::START_HUNTERS; ++i)
 	{
-		ActorsRepository::get()->createElves();
+		ActorsRepository::get()->createHunter();
 	}
 }
 
 void DatNS::update()
 {
 
+}
+
+void DatNS::draw()
+{
+	ActorsRepository::reset();
 }

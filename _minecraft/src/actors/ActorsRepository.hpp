@@ -26,6 +26,8 @@ namespace DatNS
 			START_HUNTERS	= 10
 		};
 		static ActorsRepository* get();
+		static void reset();
+
 		void insert(Actor* actor);
 		void insert(ZergActor* actor);
 

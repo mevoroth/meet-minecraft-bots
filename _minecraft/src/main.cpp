@@ -24,6 +24,9 @@
 
 #include <map>
 
+//Custom code
+#include "utils\types_extended.hpp"
+
 NYRenderer * g_renderer = NULL;
 NYTimer * g_timer = NULL;
 int g_nb_frames = 0;
@@ -713,7 +716,8 @@ int main(int argc, char* argv[])
 	//Fin init moteur
 
 	//Init application
-	g_world = new NYWorld();
+	//g_world = new NYWorld();
+	g_world = UniqWorld::get()->World();
 	g_world->_FacteurGeneration = 1;
 	g_world->init_world();
 	g_world->addToPhysic();

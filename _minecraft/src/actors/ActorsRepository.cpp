@@ -1,5 +1,7 @@
 #include "ActorsRepository.hpp"
 
+#include "utils\types_extended.hpp"
+
 #include <exception>
 
 using namespace DatNS;
@@ -16,6 +18,11 @@ ActorsRepository* ActorsRepository::get()
 	return _inst;
 }
 
+void ActorsRepository::reset()
+{
+	ZergActor::reset();
+}
+
 void ActorsRepository::insert(Actor* actor)
 {
 	
@@ -28,14 +35,28 @@ void ActorsRepository::insert(ZergActor* actor)
 
 Actor* ActorsRepository::createParasite()
 {
-	ZergActor* parasite = new ZergActor(NYVert3Df(0, 0, 0), NYVert3Df(0, 0, 0), NYVert3Df(0, 0, 0));
+	NYWorld* w = UniqWorld::get()->World();
+	static const int worldsize = MAT_SIZE * NYChunk::CHUNK_SIZE;
+
+	int x = rand() % worldsize;
+	int y = rand() % worldsize;
+
+	ZergActor* parasite = new ZergActor(
+		NYVert3Df(x, y, w->_MatriceHeightsTmp[x][y]),
+		NYVert3Df(0, 0, 0),
+		FORWARD
+	);
 	insert(parasite);
 	return parasite;
 }
 
 Actor* ActorsRepository::createParasite(const Actor& src)
 {
-	ZergActor* parasite = new ZergActor(NYVert3Df(0, 0, 0), NYVert3Df(0, 0, 0), NYVert3Df(0, 0, 0));
+	ZergActor* parasite = new ZergActor(
+		src.getPosition(),
+		NYVert3Df(0, 0, 0),
+		src.getForward()
+	);
 	insert(parasite);
 	return parasite;
 }

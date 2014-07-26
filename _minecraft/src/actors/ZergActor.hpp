@@ -7,6 +7,10 @@
 #include "ai\Multiplyable.hpp"
 #include "ai\Parasite.hpp"
 
+#include <vector>
+
+using namespace std;
+
 namespace DatNS
 {
 	class ZergActor
@@ -14,10 +18,17 @@ namespace DatNS
 		public Multiplyable,
 		public Parasite
 	{
+	private:
+		vector<float> vertices;
+
 	public:
 		ZergActor(const NYVert3Df& pos, const NYVert3Df& speed, const NYVert3Df& fw);
+
+		static void reset();
+
 		void multiply();
 		void update();
+		void render();
 	};
 };
 

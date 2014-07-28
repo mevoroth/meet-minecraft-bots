@@ -71,3 +71,21 @@ list<ElfActor*> ActorsRepository::getElves()
 {
 	return list<ElfActor*>();
 }
+
+list<ZergActor*> ActorsRepository::getParasites()
+{
+	return _parasites;
+}
+
+Actor* ActorsRepository::createBush()
+{
+	return 0;
+}
+Actor* ActorsRepository::createElf()
+{
+	return 0;
+}
+Actor* ActorsRepository::createHunter()
+{
+	return 0;
+}

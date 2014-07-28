@@ -36,4 +36,11 @@ void DatNS::update()
 void DatNS::draw()
 {
 	ActorsRepository::reset();
+	list<ZergActor*> z = ActorsRepository::get()->getParasites();
+	for (list<ZergActor*>::const_iterator it = z.begin();
+		it != z.end();
+		++it)
+	{
+		(*it)->render();
+	}
 }

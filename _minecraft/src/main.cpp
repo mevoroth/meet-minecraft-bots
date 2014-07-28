@@ -26,6 +26,7 @@
 
 //Custom code
 #include "utils\types_extended.hpp"
+#include "OurMinecraft.hpp"
 
 NYRenderer * g_renderer = NULL;
 NYTimer * g_timer = NULL;
@@ -173,6 +174,9 @@ void renderObjects(void)
 	glPushMatrix();	
 	g_world->render_world_vbo();
 	glPopMatrix();
+
+	// Render our assets
+	DatNS::draw();
 
 	//Rendu de l'avatar
 	if(g_flyCam)
@@ -721,6 +725,9 @@ int main(int argc, char* argv[])
 	g_world->_FacteurGeneration = 1;
 	g_world->init_world();
 	g_world->addToPhysic();
+
+	// Init our assets
+	DatNS::init();
 
 	//Avatar
 	g_avatar = new NYAvatar(g_renderer->_Camera, g_world);

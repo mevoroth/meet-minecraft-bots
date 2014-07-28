@@ -39,6 +39,7 @@ namespace DatNS
 		void removeParasite(ZergActor* actor);
 
 		list<ElfActor*> getElves();
+		list<ZergActor*> getParasites();
 	};
 }
 

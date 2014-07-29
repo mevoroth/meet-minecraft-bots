@@ -20,14 +20,6 @@ namespace DatNS
 		public Multiplyable,
 		public Parasite
 	{
-	private:
-		vector<float> vertices;
-		vector<float> normals;
-		vector<float> colors;
-		vector<int> indexes;
-
-		GLuint _vbo;
-
 	public:
 		ZergActor(const NYVert3Df& pos, const NYVert3Df& speed, const NYVert3Df& fw);
 

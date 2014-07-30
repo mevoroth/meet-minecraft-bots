@@ -102,6 +102,9 @@ void update(void)
 	if(!g_flyCam)
 		g_renderer->_Camera->moveTo(g_avatar->Position);
 
+	// Update our assets
+	DatNS::update(elapsed);
+
 	//Rendu
 	g_renderer->render(elapsed);
 }

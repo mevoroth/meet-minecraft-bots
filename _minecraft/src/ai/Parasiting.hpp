@@ -9,13 +9,13 @@ namespace DatNS
 	{
 	public:
 		enum { MULTIPLY = 10 };
-		virtual ReturnCode update(Actor& actor);
+		virtual ReturnCode update(Actor& actor) const;
 
-		virtual void onFinished(Actor& actor);
-		virtual void onStarted(Actor& actor);
-		virtual void onDoing(Actor& actor);
-		virtual void onAbort(Actor& actor);
-		virtual void onInvalid(Actor& actor);
+		virtual void onFinished(Actor& actor) const {};
+		virtual void onStarted(Actor& actor) const {};
+		virtual void onDoing(Actor& actor) const {};
+		virtual void onAbort(Actor& actor) const {};
+		virtual void onInvalid(Actor& actor) const {};
 	};
 };
 

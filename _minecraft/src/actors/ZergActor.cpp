@@ -4,6 +4,7 @@
 #include "gl/glut.h"
 
 #include "ActorsRepository.hpp"
+#include "ai\AIFactory.hpp"
 
 using namespace DatNS;
 
@@ -17,9 +18,9 @@ void ZergActor::multiply()
 	ActorsRepository::get()->createParasite(*this);
 }
 
-void ZergActor::update()
+void ZergActor::update(float elapsedTime)
 {
-
+	AIFactory::get()->createZergAI()->currentBehavior(*this)->update(*this);
 }
 
 void ZergActor::render()
@@ -31,7 +32,7 @@ void ZergActor::render()
 
 	glPushMatrix();
 	//glMultMatrixf(m);
-	glTranslatef(Position().X * 10, Position().Y * 10, Position().Z * 10 + 10);
+	glTranslatef(Position().X * 10 + 5, Position().Y * 10 + 5, Position().Z * 10 + 5);
 	glutSolidCube(9);
 	glPopMatrix();
 }

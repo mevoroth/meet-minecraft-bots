@@ -4,15 +4,9 @@
 
 using namespace DatNS;
 
-Behavior::ReturnCode Multiply::update(Actor& actor)
+Behavior::ReturnCode Multiply::update(Actor& actor) const
 {
 	reinterpret_cast<Multiplyable&>(actor).multiply();
 	onFinished(actor);
 	return Behavior::FINISHED;
 }
-
-void Multiply::onFinished(Actor& actor) {}
-void Multiply::onStarted(Actor& actor) {}
-void Multiply::onDoing(Actor& actor) {}
-void Multiply::onAbort(Actor& actor) {}
-void Multiply::onInvalid(Actor& actor) {}

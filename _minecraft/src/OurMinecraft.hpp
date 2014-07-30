@@ -4,7 +4,7 @@
 namespace DatNS
 {
 	void init();
-	void update();
+	void update(float elapsed);
 	void draw();
 }
 

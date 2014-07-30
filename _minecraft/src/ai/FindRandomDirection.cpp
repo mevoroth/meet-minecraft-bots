@@ -6,7 +6,7 @@
 
 using namespace DatNS;
 
-Behavior::ReturnCode FindRandomDirection::update(Actor& actor)
+Behavior::ReturnCode FindRandomDirection::update(Actor& actor) const
 {
 	NYVert3Df fw(FORWARD);
 	NYVert3Df up(UP);

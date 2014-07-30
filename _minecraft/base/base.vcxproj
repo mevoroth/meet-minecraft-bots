@@ -168,12 +168,15 @@
     <ClCompile Include="..\src\ai\BehaviorTree.cpp" />
     <ClCompile Include="..\src\ai\Condition.cpp" />
     <ClCompile Include="..\src\ai\ElfSelector.cpp" />
+    <ClCompile Include="..\src\ai\Find.cpp" />
     <ClCompile Include="..\src\ai\FindRandomDirection.cpp" />
     <ClCompile Include="..\src\ai\Multiply.cpp" />
     <ClCompile Include="..\src\ai\Parasite.cpp" />
     <ClCompile Include="..\src\ai\Parasiting.cpp" />
     <ClCompile Include="..\src\ai\ParasitingCondition.cpp" />
     <ClCompile Include="..\src\ai\SelectorFactory.cpp" />
+    <ClCompile Include="..\src\ai\SequenceBehavior.cpp" />
+    <ClCompile Include="..\src\ai\Teleport.cpp" />
     <ClCompile Include="..\src\ai\ZergSelector.cpp" />
     <ClCompile Include="..\src\basic_physic_engine.cpp" />
     <ClCompile Include="..\src\chunk.cpp" />
@@ -215,6 +218,7 @@
     <ClInclude Include="..\src\ai\SelectorFactory.hpp" />
     <ClInclude Include="..\src\ai\Separate.hpp" />
     <ClInclude Include="..\src\ai\SequenceBehavior.hpp" />
+    <ClInclude Include="..\src\ai\SequenceStore.hpp" />
     <ClInclude Include="..\src\ai\Teleport.hpp" />
     <ClInclude Include="..\src\ai\ZergSelector.hpp" />
     <ClInclude Include="..\src\avatar.h" />

@@ -7,6 +7,8 @@ namespace DatNS
 {
 	class SequenceBehavior : public Behavior
 	{
+	private:
+		vector<Behavior*> _sequence;
 	public:
 		/**
 		 * Add Sub behavior
@@ -17,33 +19,33 @@ namespace DatNS
 		* @param[inout] Actor
 		* @return Return code of action
 		*/
-		virtual ReturnCode update(Actor& actor);
+		virtual ReturnCode update(Actor& actor) const;
 
 		/**
 		* On Finished event
 		* @param[inout] Actor
 		*/
-		virtual void onFinished(Actor& actor);
+		virtual void onFinished(Actor& actor) const {};
 		/**
 		* On Started event
 		* @param[inout] Actor
 		*/
-		virtual void onStarted(Actor& actor);
+		virtual void onStarted(Actor& actor) const {};
 		/**
 		* On Doing event
 		* @param[inout] Actor
 		*/
-		virtual void onDoing(Actor& actor);
+		virtual void onDoing(Actor& actor) const {};
 		/**
 		* On Abort event
 		* @param[inout] Actor
 		*/
-		virtual void onAbort(Actor& actor);
+		virtual void onAbort(Actor& actor) const {};
 		/**
 		* On Invalid event
 		* @param[inout] Actor
 		*/
-		virtual void onInvalid(Actor& actor);
+		virtual void onInvalid(Actor& actor) const {};
 	};
 }
 

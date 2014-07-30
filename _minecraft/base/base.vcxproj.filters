@@ -500,6 +500,15 @@
     <ClCompile Include="..\src\utils\types_extended.cpp">
       <Filter>utils</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\ai\SequenceBehavior.cpp">
+      <Filter>ai</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ai\Find.cpp">
+      <Filter>ai</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ai\Teleport.cpp">
+      <Filter>ai</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="engine">
@@ -643,6 +652,9 @@
     <ClInclude Include="..\src\OurMinecraft.hpp" />
     <ClInclude Include="..\src\utils\types_extended.hpp">
       <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\SequenceStore.hpp">
+      <Filter>ai</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -20,33 +20,33 @@ namespace DatNS
 		 * @param[inout] Actor
 		 * @return Return code of action
 		 */
-		virtual ReturnCode update(Actor& actor) = 0;
+		virtual ReturnCode update(Actor& actor) const = 0;
 
 		/**
 		 * On Finished event
 		 * @param[inout] Actor
 		 */
-		virtual void onFinished(Actor& actor) = 0;
+		virtual void onFinished(Actor& actor) const = 0;
 		/**
 		* On Started event
 		* @param[inout] Actor
 		*/
-		virtual void onStarted(Actor& actor) = 0;
+		virtual void onStarted(Actor& actor) const = 0;
 		/**
 		* On Doing event
 		* @param[inout] Actor
 		*/
-		virtual void onDoing(Actor& actor) = 0;
+		virtual void onDoing(Actor& actor) const = 0;
 		/**
 		* On Abort event
 		* @param[inout] Actor
 		*/
-		virtual void onAbort(Actor& actor) = 0;
+		virtual void onAbort(Actor& actor) const = 0;
 		/**
 		* On Invalid event
 		* @param[inout] Actor
 		*/
-		virtual void onInvalid(Actor& actor) = 0;
+		virtual void onInvalid(Actor& actor) const = 0;
 	};
 }
 

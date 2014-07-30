@@ -2,7 +2,7 @@
 
 using namespace DatNS;
 
-Behavior::ReturnCode Condition::update(Actor& actor)
+Behavior::ReturnCode Condition::update(Actor& actor) const
 {
 	bool ret = _execute_condition(actor);
 	if (ret)

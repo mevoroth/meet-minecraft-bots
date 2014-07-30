@@ -5,7 +5,7 @@
 using namespace DatNS;
 
 
-Behavior::ReturnCode Parasiting::update(Actor& actor)
+Behavior::ReturnCode Parasiting::update(Actor& actor) const
 {
 	uint64_t elapsed = reinterpret_cast<Parasite&>(actor).parasiting();
 	if (elapsed > MULTIPLY)
@@ -24,9 +24,3 @@ Behavior::ReturnCode Parasiting::update(Actor& actor)
 		return Behavior::ABORT;
 	}
 }
-
-void Parasiting::onFinished(Actor& actor) {}
-void Parasiting::onStarted(Actor& actor) {}
-void Parasiting::onDoing(Actor& actor) {}
-void Parasiting::onAbort(Actor& actor) {}
-void Parasiting::onInvalid(Actor& actor) {}

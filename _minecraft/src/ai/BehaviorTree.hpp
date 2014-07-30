@@ -21,7 +21,7 @@ namespace DatNS
 		 * @param[in] Actor
 		 * @eturn const Behavior* Find current behavior
 		 */
-		const Behavior* currentBehavior(const Actor& actor);
+		const Behavior* currentBehavior(const Actor& actor) const;
 	};
 };
 

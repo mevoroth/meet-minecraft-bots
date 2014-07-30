@@ -20,7 +20,7 @@ namespace DatNS
 		NYVert3Df& Forward() { return _fw; };
 		NYVert3Df getForward() const { return _fw; };
 
-		virtual void update() = 0;
+		virtual void update(float elapsedTime) = 0;
 		virtual void render() = 0;
 	};
 };

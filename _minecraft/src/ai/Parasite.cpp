@@ -10,6 +10,6 @@ Parasite::Parasite()
 
 uint64_t Parasite::parasiting()
 {
-	throw std::exception("NOT IMPLEMENTED");
+	//throw std::exception("NOT IMPLEMENTED");
 	return 0l;
 }

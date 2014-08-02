@@ -9,7 +9,6 @@ namespace DatNS
 		: public Actor
 	{
 	public:
-		void update();
 	};
 }
 

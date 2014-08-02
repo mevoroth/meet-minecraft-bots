@@ -1,8 +1,18 @@
 #include "ZergSelector.hpp"
 
+#include "ai\CurrentBehavior.hpp"
+
 using namespace DatNS;
 
-const Behavior* ZergSelector::getBehavior() const
+void ZergSelector::behave(Actor& actor) const
 {
-	return 0;
+	int current = dynamic_cast<CurrentBehavior<int>&>(actor).getBehavior();
+	Behavior::ReturnCode ret = getBehaviors()[current]->update(actor);
+	switch (ret)
+	{
+	case Behavior::ABORT:
+	case Behavior::FINISHED:
+		dynamic_cast<CurrentBehavior<int>&>(actor).setBehavior((current + 1) % getBehaviors().size());
+		break;
+	}
 }

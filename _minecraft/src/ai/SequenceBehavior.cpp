@@ -4,6 +4,11 @@
 
 using namespace DatNS;
 
+SequenceBehavior::SequenceBehavior(const std::string& tag)
+	: _tag(tag)
+{
+}
+
 /**
 * Add Sub behavior
 */
@@ -18,7 +23,7 @@ void SequenceBehavior::addSubBehavior(Behavior* behavior)
 */
 Behavior::ReturnCode SequenceBehavior::update(Actor& actor) const
 {
-	int state = reinterpret_cast<SequenceStore&>(actor).retrieveState();
+	int state = dynamic_cast<SequenceStore&>(actor).retrieveState(_tag);
 	Behavior::ReturnCode ret = _sequence[state]->update(actor);
 	switch (ret)
 	{
@@ -30,7 +35,7 @@ Behavior::ReturnCode SequenceBehavior::update(Actor& actor) const
 		++state;
 		if (state < _sequence.size())
 		{
-			reinterpret_cast<SequenceStore&>(actor).storeSequenceState(state);
+			dynamic_cast<SequenceStore&>(actor).storeSequenceState(_tag, state);
 			return DOING;
 		}
 		break;

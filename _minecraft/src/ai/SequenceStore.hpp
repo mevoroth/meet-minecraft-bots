@@ -6,8 +6,8 @@ namespace DatNS
 	class SequenceStore
 	{
 	public:
-		virtual void storeSequenceState(int state) = 0;
-		virtual int retrieveState() const = 0;
+		virtual void storeSequenceState(const std::string& key, int state) = 0;
+		virtual int retrieveState(const std::string& key) = 0;
 	};
 }
 

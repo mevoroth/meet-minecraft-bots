@@ -5,6 +5,8 @@
 #include "Actor.hpp"
 #include "ZergActor.hpp"
 #include "ElfActor.hpp"
+#include "BushActor.hpp"
+#include "HunterActor.hpp"
 
 using namespace std;
 
@@ -15,7 +17,10 @@ namespace DatNS
 	private:
 		static ActorsRepository* _inst;
 
+		list<ZergActor*> _elves;
 		list<ZergActor*> _parasites;
+		list<BushActor*> _bushes;
+		list<HunterActor*> _hunters;
 
 		ActorsRepository();
 	public:
@@ -28,8 +33,9 @@ namespace DatNS
 		static ActorsRepository* get();
 		static void reset();
 
-		void insert(Actor* actor);
+		//void insert(Actor* actor);
 		void insert(ZergActor* actor);
+		void insert(BushActor* actor);
 
 		Actor* createParasite();
 		Actor* createBush();
@@ -40,6 +46,8 @@ namespace DatNS
 
 		list<ElfActor*> getElves();
 		list<ZergActor*> getParasites();
+		list<BushActor*> getBushes();
+		list<HunterActor*> getHunters();
 	};
 }
 

@@ -162,6 +162,7 @@
     <ClCompile Include="..\..\_engine\src\external\bullet\src\MiniCL\MiniCLTask\MiniCLTask.cpp" />
     <ClCompile Include="..\src\actors\Actor.cpp" />
     <ClCompile Include="..\src\actors\ActorsRepository.cpp" />
+    <ClCompile Include="..\src\actors\BushActor.cpp" />
     <ClCompile Include="..\src\actors\Hunter.cpp" />
     <ClCompile Include="..\src\actors\ZergActor.cpp" />
     <ClCompile Include="..\src\ai\AIFactory.cpp" />
@@ -192,6 +193,7 @@
     <ClInclude Include="..\..\_engine\src\engine\render\renderer.h" />
     <ClInclude Include="..\src\actors\Actor.hpp" />
     <ClInclude Include="..\src\actors\ActorsRepository.hpp" />
+    <ClInclude Include="..\src\actors\BushActor.hpp" />
     <ClInclude Include="..\src\actors\ElfActor.hpp" />
     <ClInclude Include="..\src\actors\Hunter.hpp" />
     <ClInclude Include="..\src\actors\ZergActor.hpp" />
@@ -200,6 +202,7 @@
     <ClInclude Include="..\src\ai\Behavior.hpp" />
     <ClInclude Include="..\src\ai\BehaviorTree.hpp" />
     <ClInclude Include="..\src\ai\Condition.hpp" />
+    <ClInclude Include="..\src\ai\CurrentBehavior.hpp" />
     <ClInclude Include="..\src\ai\Eat.hpp" />
     <ClInclude Include="..\src\ai\ElfSelector.hpp" />
     <ClInclude Include="..\src\ai\Find.hpp" />
@@ -209,6 +212,7 @@
     <ClInclude Include="..\src\ai\Move.hpp" />
     <ClInclude Include="..\src\ai\Multiply.hpp" />
     <ClInclude Include="..\src\ai\Multiplyable.hpp" />
+    <ClInclude Include="..\src\ai\NewPosition.hpp" />
     <ClInclude Include="..\src\ai\Parasite.hpp" />
     <ClInclude Include="..\src\ai\Parasiting.hpp" />
     <ClInclude Include="..\src\ai\ParasitingCondition.hpp" />

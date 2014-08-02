@@ -9,6 +9,7 @@ namespace DatNS
 	{
 	public:
 		virtual void store(const NYVert3Df& dir) = 0;
+		virtual NYVert3Df retrieve() const = 0;
 	};
 }
 

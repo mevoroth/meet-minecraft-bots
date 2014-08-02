@@ -8,7 +8,7 @@ namespace DatNS
 	class ZergSelector : public Selector
 	{
 	public:
-		virtual const Behavior* getBehavior() const;
+		virtual void behave(Actor& actor) const;
 	};
 };
 

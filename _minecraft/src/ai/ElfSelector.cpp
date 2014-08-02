@@ -2,7 +2,6 @@
 
 using namespace DatNS;
 
-const Behavior* ElfSelector::getBehavior() const
+void ElfSelector::behave(Actor& actor) const
 {
-	return 0;
 }

@@ -10,6 +10,8 @@ using namespace DatNS;
 
 ZergActor::ZergActor(const NYVert3Df& pos, const NYVert3Df& speed, const NYVert3Df& fw)
 	: Actor(pos, speed, fw)
+	, _currentBehavior(0)
+	, _sequenceState(0)
 {
 }
 
@@ -20,7 +22,8 @@ void ZergActor::multiply()
 
 void ZergActor::update(float elapsedTime)
 {
-	AIFactory::get()->createZergAI()->currentBehavior(*this)->update(*this);
+	const BehaviorTree* bt = AIFactory::get()->createZergAI();
+	bt->currentBehavior(*this);
 }
 
 void ZergActor::render()
@@ -40,4 +43,25 @@ void ZergActor::render()
 void ZergActor::reset()
 {
 
+}
+
+void ZergActor::storeSequenceState(const std::string& key, int state)
+{
+	_states[key] = state;
+}
+int ZergActor::retrieveState(const std::string& key)
+{
+	std::map<std::string, int>::const_iterator it = _states.find(key);
+	if (it != _states.cend())
+	{
+		return it->second;
+	}
+	_states[key] = 0;
+	return 0;
+}
+
+NYVert3Df ZergActor::getNewPosition() const
+{
+	NYVert3Df randVect = retrieve();
+	return getPosition() + randVect * 0.001f;
 }

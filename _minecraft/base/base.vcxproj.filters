@@ -509,6 +509,9 @@
     <ClCompile Include="..\src\ai\Teleport.cpp">
       <Filter>ai</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\actors\BushActor.cpp">
+      <Filter>actors</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="engine">
@@ -655,6 +658,15 @@
     </ClInclude>
     <ClInclude Include="..\src\ai\SequenceStore.hpp">
       <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\CurrentBehavior.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\NewPosition.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\actors\BushActor.hpp">
+      <Filter>actors</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

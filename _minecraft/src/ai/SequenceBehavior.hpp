@@ -9,7 +9,9 @@ namespace DatNS
 	{
 	private:
 		vector<Behavior*> _sequence;
+		std::string _tag;
 	public:
+		SequenceBehavior(const std::string& tag);
 		/**
 		 * Add Sub behavior
 		 */

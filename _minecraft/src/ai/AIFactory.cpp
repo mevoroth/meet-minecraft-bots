@@ -7,6 +7,7 @@ using namespace DatNS;
 AIFactory* AIFactory::_inst = 0;
 
 AIFactory::AIFactory()
+	: _zergAI(0)
 {
 }
 AIFactory::~AIFactory()

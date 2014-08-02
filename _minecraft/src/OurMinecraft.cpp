@@ -37,6 +37,27 @@ void DatNS::update(float elapsed)
 	{
 		(*it)->update(elapsed);
 	}
+	list<BushActor*> b = ActorsRepository::get()->getBushes();
+	for (list<BushActor*>::const_iterator it = b.begin();
+		it != b.end();
+		++it)
+	{
+		(*it)->update(elapsed);
+	}
+	list<HunterActor*> h = ActorsRepository::get()->getHunters();
+	for (list<HunterActor*>::const_iterator it = h.begin();
+		it != h.end();
+		++it)
+	{
+		(*it)->update(elapsed);
+	}
+	list<ElfActor*> e = ActorsRepository::get()->getElves();
+	for (list<ElfActor*>::const_iterator  it = e.begin();
+		it != e.end();
+		++it)
+	{
+		(*it)->update(elapsed);
+	}
 }
 
 void DatNS::draw()
@@ -45,6 +66,27 @@ void DatNS::draw()
 	list<ZergActor*> z = ActorsRepository::get()->getParasites();
 	for (list<ZergActor*>::const_iterator it = z.begin();
 		it != z.end();
+		++it)
+	{
+		(*it)->render();
+	}
+	list<BushActor*> b = ActorsRepository::get()->getBushes();
+	for (list<BushActor*>::const_iterator it = b.begin();
+		it != b.end();
+		++it)
+	{
+		(*it)->render();
+	}
+	list<HunterActor*> h = ActorsRepository::get()->getHunters();
+	for (list<HunterActor*>::const_iterator it = h.begin();
+		it != h.end();
+		++it)
+	{
+		(*it)->render();
+	}
+	list<ElfActor*> e = ActorsRepository::get()->getElves();
+	for (list<ElfActor*>::const_iterator  it = e.begin();
+		it != e.end();
 		++it)
 	{
 		(*it)->render();

@@ -5,10 +5,12 @@
 
 namespace DatNS
 {
-	class Hunter : public Actor
+	class HunterActor
+		: public Actor
 	{
 	public:
-		virtual void update();
+		virtual void update(float elapsedTime);
+		virtual void render();
 	};
 };
 

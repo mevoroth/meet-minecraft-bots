@@ -27,7 +27,7 @@ Selector* SelectorFactory::getZergSelector()
 	//sel->addBehavior()
 
 	/* BEGIN Parasiting Behavior */
-	behavior = new SequenceBehavior();
+	behavior = new SequenceBehavior("Parasiting");
 	dynamic_cast<SequenceBehavior*>(behavior)->addSubBehavior(new ParasitingCondition());
 	dynamic_cast<SequenceBehavior*>(behavior)->addSubBehavior(new Parasiting());
 	dynamic_cast<SequenceBehavior*>(behavior)->addSubBehavior(new Multiply());
@@ -35,7 +35,7 @@ Selector* SelectorFactory::getZergSelector()
 	/* END Parasiting Behavior */
 
 	/* BEGIN Hunt Behavior */
-	behavior = new SequenceBehavior();
+	behavior = new SequenceBehavior("Hunt");
 
 	/* BEGIN Find SubBehavior */
 	behaviorSub = new Find();
@@ -43,7 +43,7 @@ Selector* SelectorFactory::getZergSelector()
 	/* END Find SubBehavior */
 
 	/* BEGIN Move Randomly */
-	behaviorSub = new SequenceBehavior();
+	behaviorSub = new SequenceBehavior("MoveRandom");
 	dynamic_cast<SequenceBehavior*>(behaviorSub)->addSubBehavior(new FindRandomDirection());
 	dynamic_cast<SequenceBehavior*>(behaviorSub)->addSubBehavior(new Teleport());
 	dynamic_cast<SequenceBehavior*>(behavior)->addSubBehavior(behaviorSub);

@@ -15,7 +15,7 @@ Behavior::ReturnCode FindRandomDirection::update(Actor& actor) const
 	fw.rotate(up, static_cast<float>(rand()) * 2.0f * M_PI / static_cast<float>(RAND_MAX));
 	fw.rotate(right, static_cast<float>(rand()) * 2.0f * M_PI / static_cast<float>(RAND_MAX));
 	
-	reinterpret_cast<RandomDirectionStore&>(actor).store(fw);
+	dynamic_cast<RandomDirectionStore&>(actor).store(fw);
 
 	onFinished(actor);
 	return ReturnCode::FINISHED;

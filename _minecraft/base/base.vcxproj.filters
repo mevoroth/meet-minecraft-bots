@@ -451,9 +451,6 @@
     <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletDynamics\ConstraintSolver\btSequentialImpulseConstraintSolver.cpp">
       <Filter>engine\external\bullet</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\actors\Hunter.cpp">
-      <Filter>actors</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\ai\BehaviorTree.cpp">
       <Filter>ai</Filter>
     </ClCompile>
@@ -510,6 +507,9 @@
       <Filter>ai</Filter>
     </ClCompile>
     <ClCompile Include="..\src\actors\BushActor.cpp">
+      <Filter>actors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\actors\HunterActor.cpp">
       <Filter>actors</Filter>
     </ClCompile>
   </ItemGroup>
@@ -603,9 +603,6 @@
     <ClInclude Include="..\src\ai\Teleport.hpp">
       <Filter>ai</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\actors\Hunter.hpp">
-      <Filter>actors</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\actors\Actor.hpp">
       <Filter>actors</Filter>
     </ClInclude>
@@ -667,6 +664,12 @@
     </ClInclude>
     <ClInclude Include="..\src\actors\BushActor.hpp">
       <Filter>actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\actors\HunterActor.hpp">
+      <Filter>actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\LookAround.hpp">
+      <Filter>ai</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

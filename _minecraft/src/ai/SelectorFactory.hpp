@@ -12,6 +12,7 @@ namespace DatNS
 	public:
 		static Selector* getElfSelector();
 		static Selector* getZergSelector();
+		static Selector* getHunterSelector();
 	};
 };
 

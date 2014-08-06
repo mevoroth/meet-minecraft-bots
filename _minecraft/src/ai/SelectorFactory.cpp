@@ -9,13 +9,48 @@
 #include "Teleport.hpp"
 #include "Find.hpp"
 #include "FindRandomDirection.hpp"
+#include "Group.hpp"
+#include "Move.hpp"
+#include "Separate.hpp"
+#include "Eat.hpp"
+#include "LookAround.hpp"
 
 using namespace DatNS;
 
 Selector* SelectorFactory::getElfSelector()
 {
 	Selector* sel = new ElfSelector();
-	//sel->addBehavior();
+	Behavior* behavior;
+	Behavior* behaviorSub;
+
+	behavior = new Group();
+	sel->addBehavior(behavior);
+
+	behavior = new SequenceBehavior("Separating");
+	dynamic_cast<SequenceBehavior*>(behavior)->addSubBehavior(new SeparatingCondition());
+	dynamic_cast<SequenceBehavior*>(behavior)->addSubBehavior(new Separate());
+	sel->addBehavior(behavior);
+
+	behavior = new SequenceBehavior("Grouping");
+	dynamic_cast<SequenceBehavior*>(behavior)->addSubBehavior(new GroupingCondition());
+	dynamic_cast<SequenceBehavior*>(behavior)->addSubBehavior(new Group());
+	sel->addBehavior(behavior);
+
+	behavior = new SequenceBehavior("Reproducing");
+	dynamic_cast<SequenceBehavior*>(behavior)->addSubBehavior(new LookAround());
+	dynamic_cast<SequenceBehavior*>(behavior)->addSubBehavior(new ReproducingCondition());
+	dynamic_cast<SequenceBehavior*>(behavior)->addSubBehavior(new Multiply());
+	sel->addBehavior(behavior);
+
+	behavior = new Eat();
+	sel->addBehavior(behavior);
+
+	behavior = new SequenceBehavior("MoveToBush");
+	dynamic_cast<SequenceBehavior*>(behavior)->addSubBehavior(new LookAround());
+	dynamic_cast<SequenceBehavior*>(behavior)->addSubBehavior(new FindBush());
+	dynamic_cast<SequenceBehavior*>(behavior)->addSubBehavior(new Move());
+	sel->addBehavior(behavior);
+
 	return sel;
 }
 
@@ -53,4 +88,11 @@ Selector* SelectorFactory::getZergSelector()
 	/* END Hunt Behavior */
 
 	return sel;
+}
+
+Selector* SelectorFactory::getHunterSelector()
+{
+	/*Selector* sel = new HunterSelector();
+	return sel;*/
+	return 0;
 }

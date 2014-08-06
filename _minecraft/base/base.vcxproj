@@ -163,7 +163,7 @@
     <ClCompile Include="..\src\actors\Actor.cpp" />
     <ClCompile Include="..\src\actors\ActorsRepository.cpp" />
     <ClCompile Include="..\src\actors\BushActor.cpp" />
-    <ClCompile Include="..\src\actors\Hunter.cpp" />
+    <ClCompile Include="..\src\actors\HunterActor.cpp" />
     <ClCompile Include="..\src\actors\ZergActor.cpp" />
     <ClCompile Include="..\src\ai\AIFactory.cpp" />
     <ClCompile Include="..\src\ai\BehaviorTree.cpp" />
@@ -195,7 +195,7 @@
     <ClInclude Include="..\src\actors\ActorsRepository.hpp" />
     <ClInclude Include="..\src\actors\BushActor.hpp" />
     <ClInclude Include="..\src\actors\ElfActor.hpp" />
-    <ClInclude Include="..\src\actors\Hunter.hpp" />
+    <ClInclude Include="..\src\actors\HunterActor.hpp" />
     <ClInclude Include="..\src\actors\ZergActor.hpp" />
     <ClInclude Include="..\src\actors\types.hpp" />
     <ClInclude Include="..\src\ai\AIFactory.hpp" />
@@ -209,6 +209,7 @@
     <ClInclude Include="..\src\ai\FindRandomDirection.hpp" />
     <ClInclude Include="..\src\ai\Group.hpp" />
     <ClInclude Include="..\src\ai\HunterSelector.hpp" />
+    <ClInclude Include="..\src\ai\LookAround.hpp" />
     <ClInclude Include="..\src\ai\Move.hpp" />
     <ClInclude Include="..\src\ai\Multiply.hpp" />
     <ClInclude Include="..\src\ai\Multiplyable.hpp" />

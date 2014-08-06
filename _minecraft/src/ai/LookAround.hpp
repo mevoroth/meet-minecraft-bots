@@ -1,9 +1,11 @@
-#ifndef _SEPARATE_HPP_
-#define _SEPARATE_HPP_
+#ifndef _LOOK_AROUND_HPP_
+#define _LOOK_AROUND_HPP_
+
+#include "Behavior.hpp"
 
 namespace DatNS
 {
-	class Separate : public Behavior
+	class LookAround : public Behavior
 	{
 	public:
 		virtual ReturnCode update(Actor& actor) const;

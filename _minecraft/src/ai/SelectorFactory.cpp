@@ -14,6 +14,10 @@
 #include "Separate.hpp"
 #include "Eat.hpp"
 #include "LookAround.hpp"
+#include "FindBush.hpp"
+#include "SeparatingCondition.hpp"
+#include "GroupingCondition.hpp"
+#include "ReproducingCondition.hpp"
 
 using namespace DatNS;
 

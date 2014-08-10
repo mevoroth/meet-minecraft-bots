@@ -163,6 +163,7 @@
     <ClCompile Include="..\src\actors\Actor.cpp" />
     <ClCompile Include="..\src\actors\ActorsRepository.cpp" />
     <ClCompile Include="..\src\actors\BushActor.cpp" />
+    <ClCompile Include="..\src\actors\GroupActor.cpp" />
     <ClCompile Include="..\src\actors\HunterActor.cpp" />
     <ClCompile Include="..\src\actors\ZergActor.cpp" />
     <ClCompile Include="..\src\ai\AIFactory.cpp" />
@@ -171,6 +172,7 @@
     <ClCompile Include="..\src\ai\ElfSelector.cpp" />
     <ClCompile Include="..\src\ai\Find.cpp" />
     <ClCompile Include="..\src\ai\FindRandomDirection.cpp" />
+    <ClCompile Include="..\src\ai\Group.cpp" />
     <ClCompile Include="..\src\ai\Multiply.cpp" />
     <ClCompile Include="..\src\ai\Parasite.cpp" />
     <ClCompile Include="..\src\ai\Parasiting.cpp" />
@@ -195,6 +197,7 @@
     <ClInclude Include="..\src\actors\ActorsRepository.hpp" />
     <ClInclude Include="..\src\actors\BushActor.hpp" />
     <ClInclude Include="..\src\actors\ElfActor.hpp" />
+    <ClInclude Include="..\src\actors\GroupActor.hpp" />
     <ClInclude Include="..\src\actors\HunterActor.hpp" />
     <ClInclude Include="..\src\actors\ZergActor.hpp" />
     <ClInclude Include="..\src\actors\types.hpp" />
@@ -206,8 +209,11 @@
     <ClInclude Include="..\src\ai\Eat.hpp" />
     <ClInclude Include="..\src\ai\ElfSelector.hpp" />
     <ClInclude Include="..\src\ai\Find.hpp" />
+    <ClInclude Include="..\src\ai\FindBush.hpp" />
     <ClInclude Include="..\src\ai\FindRandomDirection.hpp" />
     <ClInclude Include="..\src\ai\Group.hpp" />
+    <ClInclude Include="..\src\ai\GroupElement.hpp" />
+    <ClInclude Include="..\src\ai\GroupingCondition.hpp" />
     <ClInclude Include="..\src\ai\HunterSelector.hpp" />
     <ClInclude Include="..\src\ai\LookAround.hpp" />
     <ClInclude Include="..\src\ai\Move.hpp" />
@@ -218,10 +224,12 @@
     <ClInclude Include="..\src\ai\Parasiting.hpp" />
     <ClInclude Include="..\src\ai\ParasitingCondition.hpp" />
     <ClInclude Include="..\src\ai\RandomDirectionStore.hpp" />
+    <ClInclude Include="..\src\ai\ReproducingCondition.hpp" />
     <ClInclude Include="..\src\ai\Seek.hpp" />
     <ClInclude Include="..\src\ai\Selector.hpp" />
     <ClInclude Include="..\src\ai\SelectorFactory.hpp" />
     <ClInclude Include="..\src\ai\Separate.hpp" />
+    <ClInclude Include="..\src\ai\SeparatingCondition.hpp" />
     <ClInclude Include="..\src\ai\SequenceBehavior.hpp" />
     <ClInclude Include="..\src\ai\SequenceStore.hpp" />
     <ClInclude Include="..\src\ai\Teleport.hpp" />

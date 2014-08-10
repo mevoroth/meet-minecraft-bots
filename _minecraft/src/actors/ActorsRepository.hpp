@@ -8,6 +8,8 @@
 #include "BushActor.hpp"
 #include "HunterActor.hpp"
 
+#include "GroupActor.hpp"
+
 using namespace std;
 
 namespace DatNS
@@ -17,6 +19,7 @@ namespace DatNS
 	private:
 		static ActorsRepository* _inst;
 
+		vector<GroupActor*> _groups;
 		list<ZergActor*> _elves;
 		list<ZergActor*> _parasites;
 		list<BushActor*> _bushes;

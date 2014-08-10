@@ -512,6 +512,12 @@
     <ClCompile Include="..\src\actors\HunterActor.cpp">
       <Filter>actors</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\ai\Group.cpp">
+      <Filter>ai</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\actors\GroupActor.cpp">
+      <Filter>actors</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="engine">
@@ -669,6 +675,24 @@
       <Filter>actors</Filter>
     </ClInclude>
     <ClInclude Include="..\src\ai\LookAround.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\FindBush.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\SeparatingCondition.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\GroupingCondition.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\ReproducingCondition.hpp">
+      <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\actors\GroupActor.hpp">
+      <Filter>actors</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ai\GroupElement.hpp">
       <Filter>ai</Filter>
     </ClInclude>
   </ItemGroup>

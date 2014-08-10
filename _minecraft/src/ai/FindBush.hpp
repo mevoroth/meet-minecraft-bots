@@ -1,11 +1,11 @@
-#ifndef _GROUP_HPP_
-#define _GROUP_HPP_
+#ifndef _FIND_BUSH_HPP_
+#define _FIND_BUSH_HPP_
 
 #include "Behavior.hpp"
 
 namespace DatNS
 {
-	class Group : public Behavior
+	class FindBush : public Behavior
 	{
 	public:
 		virtual ReturnCode update(Actor& actor) const;

@@ -17,7 +17,7 @@ namespace DatNS
 		const vector<Behavior*>& getBehaviors() const { return _behaviors; };
 
 		virtual void addBehavior(Behavior* behavior) { _behaviors.push_back(behavior); };
-		virtual void behave(Actor& actor) const = 0;
+		virtual void behave(Actor& actor, float elapsedTime) const = 0;
 	};
 };
 

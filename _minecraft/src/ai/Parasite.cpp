@@ -8,8 +8,8 @@ Parasite::Parasite()
 {
 }
 
-uint64_t Parasite::parasiting()
+float Parasite::parasiting()
 {
 	//throw std::exception("NOT IMPLEMENTED");
-	return 0l;
+	return 0.f;
 }

@@ -1,11 +1,13 @@
 #include "BushActor.hpp"
 
+#include "ActorsRepository.hpp"
 #include "gl/glut.h"
 
 using namespace DatNS;
 
 BushActor::BushActor(const NYVert3Df& pos, const NYVert3Df& speed, const NYVert3Df& fw)
 	: Actor(pos, speed, fw)
+	, amount(10)
 {
 }
 

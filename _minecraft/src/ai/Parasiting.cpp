@@ -1,13 +1,15 @@
 #include "Parasiting.hpp"
 
+#include "Settings.hpp"
+
 #include "ai\Parasite.hpp"
 
 using namespace DatNS;
 
 
-Behavior::ReturnCode Parasiting::update(Actor& actor) const
+Behavior::ReturnCode Parasiting::update(Actor& actor, float elapsedTime) const
 {
-	uint64_t elapsed = dynamic_cast<Parasite&>(actor).parasiting();
+	float elapsed = dynamic_cast<Parasite&>(actor).parasiting();
 	if (elapsed > MULTIPLY)
 	{
 		onFinished(actor);

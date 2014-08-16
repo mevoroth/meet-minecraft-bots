@@ -163,22 +163,32 @@
     <ClCompile Include="..\src\actors\Actor.cpp" />
     <ClCompile Include="..\src\actors\ActorsRepository.cpp" />
     <ClCompile Include="..\src\actors\BushActor.cpp" />
+    <ClCompile Include="..\src\actors\ElfActor.cpp" />
     <ClCompile Include="..\src\actors\GroupActor.cpp" />
     <ClCompile Include="..\src\actors\HunterActor.cpp" />
     <ClCompile Include="..\src\actors\ZergActor.cpp" />
     <ClCompile Include="..\src\ai\AIFactory.cpp" />
     <ClCompile Include="..\src\ai\BehaviorTree.cpp" />
     <ClCompile Include="..\src\ai\Condition.cpp" />
+    <ClCompile Include="..\src\ai\Eater.cpp" />
     <ClCompile Include="..\src\ai\ElfSelector.cpp" />
     <ClCompile Include="..\src\ai\Find.cpp" />
+    <ClCompile Include="..\src\ai\FindBush.cpp" />
     <ClCompile Include="..\src\ai\FindRandomDirection.cpp" />
     <ClCompile Include="..\src\ai\Group.cpp" />
+    <ClCompile Include="..\src\ai\GroupingCondition.cpp" />
+    <ClCompile Include="..\src\ai\LookAround.cpp" />
+    <ClCompile Include="..\src\ai\Move.cpp" />
     <ClCompile Include="..\src\ai\Multiply.cpp" />
     <ClCompile Include="..\src\ai\Parasite.cpp" />
     <ClCompile Include="..\src\ai\Parasiting.cpp" />
     <ClCompile Include="..\src\ai\ParasitingCondition.cpp" />
+    <ClCompile Include="..\src\ai\ReproducingCondition.cpp" />
     <ClCompile Include="..\src\ai\SelectorFactory.cpp" />
+    <ClCompile Include="..\src\ai\Separate.cpp" />
+    <ClCompile Include="..\src\ai\SeparatingCondition.cpp" />
     <ClCompile Include="..\src\ai\SequenceBehavior.cpp" />
+    <ClCompile Include="..\src\ai\Eat.cpp" />
     <ClCompile Include="..\src\ai\Teleport.cpp" />
     <ClCompile Include="..\src\ai\ZergSelector.cpp" />
     <ClCompile Include="..\src\basic_physic_engine.cpp" />
@@ -197,16 +207,21 @@
     <ClInclude Include="..\src\actors\ActorsRepository.hpp" />
     <ClInclude Include="..\src\actors\BushActor.hpp" />
     <ClInclude Include="..\src\actors\ElfActor.hpp" />
+    <ClInclude Include="..\src\actors\Group.hpp" />
     <ClInclude Include="..\src\actors\GroupActor.hpp" />
     <ClInclude Include="..\src\actors\HunterActor.hpp" />
     <ClInclude Include="..\src\actors\ZergActor.hpp" />
     <ClInclude Include="..\src\actors\types.hpp" />
     <ClInclude Include="..\src\ai\AIFactory.hpp" />
+    <ClInclude Include="..\src\ai\AStar.hpp" />
     <ClInclude Include="..\src\ai\Behavior.hpp" />
     <ClInclude Include="..\src\ai\BehaviorTree.hpp" />
     <ClInclude Include="..\src\ai\Condition.hpp" />
     <ClInclude Include="..\src\ai\CurrentBehavior.hpp" />
+    <ClInclude Include="..\src\ai\Destination.hpp" />
     <ClInclude Include="..\src\ai\Eat.hpp" />
+    <ClInclude Include="..\src\ai\Eatable.hpp" />
+    <ClInclude Include="..\src\ai\Eater.hpp" />
     <ClInclude Include="..\src\ai\ElfSelector.hpp" />
     <ClInclude Include="..\src\ai\Find.hpp" />
     <ClInclude Include="..\src\ai\FindBush.hpp" />
@@ -216,11 +231,13 @@
     <ClInclude Include="..\src\ai\GroupingCondition.hpp" />
     <ClInclude Include="..\src\ai\HunterSelector.hpp" />
     <ClInclude Include="..\src\ai\LookAround.hpp" />
+    <ClInclude Include="..\src\ai\LookAroundState.hpp" />
     <ClInclude Include="..\src\ai\Move.hpp" />
     <ClInclude Include="..\src\ai\Multiply.hpp" />
     <ClInclude Include="..\src\ai\Multiplyable.hpp" />
     <ClInclude Include="..\src\ai\NewPosition.hpp" />
     <ClInclude Include="..\src\ai\Parasite.hpp" />
+    <ClInclude Include="..\src\ai\Parasited.hpp" />
     <ClInclude Include="..\src\ai\Parasiting.hpp" />
     <ClInclude Include="..\src\ai\ParasitingCondition.hpp" />
     <ClInclude Include="..\src\ai\RandomDirectionStore.hpp" />
@@ -240,6 +257,7 @@
     <ClInclude Include="..\src\cube.h" />
     <ClInclude Include="..\src\my_physics.h" />
     <ClInclude Include="..\src\OurMinecraft.hpp" />
+    <ClInclude Include="..\src\Settings.hpp" />
     <ClInclude Include="..\src\utils\types_extended.hpp" />
     <ClInclude Include="..\src\world.h" />
   </ItemGroup>
@@ -294,7 +312,7 @@
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>Level4</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
     </ClCompile>
     <Link>

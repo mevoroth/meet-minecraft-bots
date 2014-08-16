@@ -21,36 +21,23 @@ using namespace std;
 namespace DatNS
 {
 	class ZergActor
-		: public Actor,
-		public Multiplyable,
-		public Parasite,
-		public SequenceStore,
-		public CurrentBehavior<int>,
-		public RandomDirectionStore,
-		public NewPosition
+		: public Actor
 	{
+	public:
+		enum ZergState
+		{
+			MULTIPLY,
+			LOOK_FOR_HOST,
+			TELEPORT
+		};
 	private:
-		int _sequenceState;
-		int _currentBehavior;
-		NYVert3Df _randomDir;
-		std::map<std::string, int> _states;
-
+		ZergState currentState;
 	public:
 		ZergActor(const NYVert3Df& pos, const NYVert3Df& speed, const NYVert3Df& fw);
 
-		static void reset();
-
-		void multiply();
-		virtual void storeSequenceState(const std::string& key, int state);
-		virtual int retrieveState(const std::string& key);
-		virtual void setBehavior(const int& state) { _currentBehavior = state; };
-		virtual int getBehavior() const { return _currentBehavior; };
-		virtual void store(const NYVert3Df& dir) { _randomDir = dir; };
-		virtual NYVert3Df retrieve() const { return _randomDir; };
-		virtual NYVert3Df getNewPosition() const;
-
 		void update(float elapsedTime);
 		void render();
+		void setState(ZergState state) { currentState = state; }
 	};
 };
 

@@ -8,13 +8,13 @@ namespace DatNS
 	class Parasite
 	{
 	private:
-		uint64_t _elapsed;
+		float _elapsed;
 	public:
 		Parasite();
 		/**
-		 * @return uint64_t Elapsed time
+		 * @return float Elapsed time
 		 */
-		uint64_t parasiting();
+		float parasiting();
 	};
 };
 

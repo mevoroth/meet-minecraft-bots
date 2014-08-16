@@ -8,7 +8,7 @@ namespace DatNS
 	class Teleport : public Behavior
 	{
 	public:
-		virtual ReturnCode update(Actor& actor) const;
+		virtual ReturnCode update(Actor& actor, float elapsedTime) const;
 
 		virtual void onFinished(Actor& actor) const {};
 		virtual void onStarted(Actor& actor) const {};

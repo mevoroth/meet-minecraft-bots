@@ -10,6 +10,8 @@ using namespace std;
 
 namespace DatNS
 {
+	class GroupElement;
+
 	class GroupActor
 	{
 	private:
@@ -24,6 +26,8 @@ namespace DatNS
 		inline bool full() const;
 		inline bool one() const;
 		inline int size() const { return _actors.size(); };
+		NYVert3Df getPosition();
+		list<GroupElement*> getElements() { return _actors; };
 	};
 }
 

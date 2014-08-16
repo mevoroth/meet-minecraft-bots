@@ -2,9 +2,9 @@
 
 using namespace DatNS;
 
-Behavior::ReturnCode Condition::update(Actor& actor) const
+Behavior::ReturnCode Condition::update(Actor& actor, float elapsedTime) const
 {
-	bool ret = _execute_condition(actor);
+	bool ret = _execute_condition(actor, elapsedTime);
 	if (ret)
 	{
 		onFinished(actor);

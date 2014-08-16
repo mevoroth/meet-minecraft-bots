@@ -22,6 +22,8 @@ namespace DatNS
 
 		virtual void update(float elapsedTime) = 0;
 		virtual void render() = 0;
+		virtual bool operator==(const Actor& actor) { return this == &actor; };
+		virtual bool operator!=(const Actor& actor) { return this != &actor; };
 	};
 };
 

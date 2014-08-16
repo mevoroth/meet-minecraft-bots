@@ -6,7 +6,7 @@ using namespace DatNS;
 
 const double ParasitingCondition::FOV = 0.8f;
 
-bool ParasitingCondition::_execute_condition(Actor& actor) const
+bool ParasitingCondition::_execute_condition(Actor& actor, float elapsedTime) const
 {
 	// Use Octree for optimization
 	list<ElfActor*> elves = ActorsRepository::get()->getElves();

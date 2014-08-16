@@ -8,7 +8,7 @@ namespace DatNS
 	class ZergSelector : public Selector
 	{
 	public:
-		virtual void behave(Actor& actor) const;
+		virtual void behave(Actor& actor, float elapsedTime) const;
 	};
 };
 

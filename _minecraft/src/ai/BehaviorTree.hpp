@@ -21,7 +21,7 @@ namespace DatNS
 		 * @param[in] Actor
 		 * @eturn const Behavior* Find current behavior
 		 */
-		void currentBehavior(Actor& actor) const;
+		void currentBehavior(Actor& actor, float elapsedTime) const;
 	};
 };
 

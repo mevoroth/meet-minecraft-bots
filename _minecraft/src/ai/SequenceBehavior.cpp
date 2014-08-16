@@ -21,10 +21,10 @@ void SequenceBehavior::addSubBehavior(Behavior* behavior)
 * @param[inout] Actor
 * @return Return code of action
 */
-Behavior::ReturnCode SequenceBehavior::update(Actor& actor) const
+Behavior::ReturnCode SequenceBehavior::update(Actor& actor, float elapsedTime) const
 {
 	int state = dynamic_cast<SequenceStore&>(actor).retrieveState(_tag);
-	Behavior::ReturnCode ret = _sequence[state]->update(actor);
+	Behavior::ReturnCode ret = _sequence[state]->update(actor, elapsedTime);
 	switch (ret)
 	{
 	case DOING:

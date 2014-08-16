@@ -8,7 +8,7 @@ namespace DatNS
 	class ReproducingCondition : public Condition
 	{
 	protected:
-		virtual bool _execute_condition(Actor& actor) const;
+		virtual bool _execute_condition(Actor& actor, float elapsedTime) const;
 	public:
 		virtual void onFinished(Actor& actor) const {};
 		virtual void onStarted(Actor& actor) const {};

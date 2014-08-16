@@ -8,7 +8,7 @@ namespace DatNS
 	class ParasitingCondition : public Condition
 	{
 	protected:
-		virtual bool _execute_condition(Actor& actor) const;
+		virtual bool _execute_condition(Actor& actor, float elapsedTime) const;
 	public:
 		static const double FOV;
 

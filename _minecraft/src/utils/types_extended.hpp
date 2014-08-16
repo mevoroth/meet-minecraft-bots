@@ -21,4 +21,9 @@ public:
 	inline NYWorld* World() { return world; };
 };
 
+template <typename T> T lerp(T a, T b, float t)
+{
+	return t*(a - b) + b;
+}
+
 #endif

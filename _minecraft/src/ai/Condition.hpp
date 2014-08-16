@@ -8,14 +8,14 @@ namespace DatNS
 	class Condition : public Behavior
 	{
 	protected:
-		virtual bool _execute_condition(Actor& actor) const = 0;
+		virtual bool _execute_condition(Actor& actor, float elapsedTime) const = 0;
 	public:
 		/**
 		 * Tick
 		 * @param[inout] Actor
 		 * @return Return code of action
 		 */
-		virtual ReturnCode update(Actor& actor) const;
+		virtual ReturnCode update(Actor& actor, float elapsedTime) const;
 
 		virtual void onFinished(Actor& actor) const = 0;
 		virtual void onStarted(Actor& actor) const = 0;

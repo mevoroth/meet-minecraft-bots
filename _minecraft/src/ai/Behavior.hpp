@@ -20,7 +20,7 @@ namespace DatNS
 		 * @param[inout] Actor
 		 * @return Return code of action
 		 */
-		virtual ReturnCode update(Actor& actor) const = 0;
+		virtual ReturnCode update(Actor& actor, float elapsedTime) const = 0;
 
 		/**
 		 * On Finished event

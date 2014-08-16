@@ -27,9 +27,6 @@ Selector* SelectorFactory::getElfSelector()
 	Behavior* behavior;
 	Behavior* behaviorSub;
 
-	behavior = new Group();
-	sel->addBehavior(behavior);
-
 	behavior = new SequenceBehavior("Separating");
 	dynamic_cast<SequenceBehavior*>(behavior)->addSubBehavior(new SeparatingCondition());
 	dynamic_cast<SequenceBehavior*>(behavior)->addSubBehavior(new Separate());

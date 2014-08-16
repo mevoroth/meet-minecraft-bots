@@ -19,8 +19,8 @@ namespace DatNS
 	private:
 		static ActorsRepository* _inst;
 
-		vector<GroupActor*> _groups;
-		list<ZergActor*> _elves;
+		list<Group*> _groups;
+		list<ElfActor*> _elves;
 		list<ZergActor*> _parasites;
 		list<BushActor*> _bushes;
 		list<HunterActor*> _hunters;
@@ -39,18 +39,22 @@ namespace DatNS
 		//void insert(Actor* actor);
 		void insert(ZergActor* actor);
 		void insert(BushActor* actor);
+		void insert(ElfActor* actor);
 
 		Actor* createParasite();
 		Actor* createBush();
 		Actor* createElf();
+		Actor* createElf(const Actor& actor);
 		Actor* createHunter();
 		Actor* createParasite(const Actor& actor);
 		void removeParasite(ZergActor* actor);
+		void removeBush(BushActor* actor);
 
 		list<ElfActor*> getElves();
 		list<ZergActor*> getParasites();
 		list<BushActor*> getBushes();
 		list<HunterActor*> getHunters();
+		list<Group*> getGroups() { return _groups; };
 	};
 }
 

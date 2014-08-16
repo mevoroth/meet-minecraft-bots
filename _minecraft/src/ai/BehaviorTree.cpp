@@ -6,7 +6,7 @@ void BehaviorTree::setSelector(Selector* sel)
 {
 	_selector = sel;
 }
-void BehaviorTree::currentBehavior(Actor& actor) const
+void BehaviorTree::currentBehavior(Actor& actor, float elapsedTime) const
 {
-	_selector->behave(actor);
+	_selector->behave(actor, elapsedTime);
 }

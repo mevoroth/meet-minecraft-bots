@@ -23,6 +23,11 @@ void ActorsRepository::reset()
 	ZergActor::reset();
 }
 
+void ActorsRepository::insert(ElfActor* actor)
+{
+	_elves.push_back(actor);
+}
+
 void ActorsRepository::insert(BushActor* actor)
 {
 	_bushes.push_back(actor);
@@ -66,10 +71,15 @@ void ActorsRepository::removeParasite(ZergActor* actor)
 	_parasites.remove(actor);
 	delete actor;
 }
+void ActorsRepository::removeBush(BushActor* actor)
+{
+	_bushes.remove(actor);
+	delete actor;
+}
 
 list<ElfActor*> ActorsRepository::getElves()
 {
-	return list<ElfActor*>();
+	return _elves;
 }
 
 list<ZergActor*> ActorsRepository::getParasites()
@@ -105,7 +115,19 @@ Actor* ActorsRepository::createBush()
 }
 Actor* ActorsRepository::createElf()
 {
-	return 0;
+	NYWorld* w = UniqWorld::get()->World();
+	static const int worldsize = MAT_SIZE * NYChunk::CHUNK_SIZE;
+
+	int x = rand() % worldsize;
+	int y = rand() % worldsize;
+
+	ElfActor* elf = new ElfActor(
+		NYVert3Df(x, y, w->_MatriceHeightsTmp[x][y]),
+		NYVert3Df(0, 0, 0),
+		FORWARD
+	);
+	insert(elf);
+	return elf;
 }
 Actor* ActorsRepository::createHunter()
 {

@@ -2,6 +2,7 @@
 #define _TYPES_EXTENDED_HPP_
 
 #include "engine\utils\types_3d.h"
+#include "engine\timer.h"
 
 #include "world.h"
 
@@ -14,16 +15,36 @@ class UniqWorld
 private:
 	static UniqWorld* instance;
 	NYWorld* world;
+	NYTimer* timer;
 	UniqWorld();
 	~UniqWorld();
 public:
 	static UniqWorld* get();
 	inline NYWorld* World() { return world; };
+	void setTimer(NYTimer* timer) { this->timer = timer; }
+	inline NYTimer* Timer() { return timer; }
 };
+
+template <typename T> T clamp(T a, T m, T M)
+{
+	if (a < m)
+	{
+		return m;
+	}
+	else if (a > M)
+	{
+		return M;
+	}
+	else
+	{
+		return a;
+	}
+}
 
 template <typename T> T lerp(T a, T b, float t)
 {
-	return t*(a - b) + b;
+	t = clamp<float>(t, 0, 1);
+	return (a - b) * t + b;
 }
 
 #endif

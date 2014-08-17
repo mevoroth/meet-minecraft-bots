@@ -3,6 +3,7 @@
 
 #include "Actor.hpp"
 #include "Group.hpp"
+#include "BushActor.hpp"
 
 namespace DatNS
 {
@@ -38,6 +39,9 @@ namespace DatNS
 		virtual void render();
 		void setState(ElfState state) { currentState = state; }
 		bool isParasited() const { return parasited; }
+		void setParasited(bool parasited) { this->parasited = parasited; }
+		void setGroup(Group* group) { this->group = group; this->group->add(this); }
+		Group* getGroup() { return group; }
 
 	};
 }

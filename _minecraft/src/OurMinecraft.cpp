@@ -30,6 +30,7 @@ void DatNS::init()
 
 void DatNS::update(float elapsed)
 {
+	static int i = 0;
 	list<ZergActor*> z = ActorsRepository::get()->getParasites();
 	for (list<ZergActor*>::const_iterator it = z.begin();
 		it != z.end();
@@ -58,6 +59,7 @@ void DatNS::update(float elapsed)
 	{
 		(*it)->update(elapsed);
 	}
+	++i;
 }
 
 void DatNS::draw()

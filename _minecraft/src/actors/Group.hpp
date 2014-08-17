@@ -17,9 +17,10 @@ namespace DatNS
 	public:
 		list<Actor*> getElements() { return elements; };
 		void add(Actor* actor) { assert(elements.size() < GROUP_SIZE); elements.push_back(actor); };
-		void remove(Actor* actor) { elements.remove(actor); }
+		void remove(Actor* actor);
 		int size() const { return elements.size(); }
 		NYVert3Df getPosition();
+		bool full() const { return size() == GROUP_SIZE; }
 	};
 }
 

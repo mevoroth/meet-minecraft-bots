@@ -12,7 +12,6 @@ using namespace DatNS;
 ElfActor::ElfActor(const NYVert3Df& pos, const NYVert3Df& speed, const NYVert3Df& rotation)
 	: Actor(pos, speed, rotation)
 	, currentState(MULTIPLY)
-	, previousState(MULTIPLY)
 	, nextState(NONE)
 	, bush(0)
 	, foundDestination(false)
@@ -27,26 +26,38 @@ void ElfActor::update(float elapsedTime)
 	{
 		if (nextState == GROUP)
 		{
-			group->add(this);
 			nextState = NONE;
 			setState(LOOK_FOR_BUSH);
 			return;
 		}
 
-		Group* group;
+		Group* group = 0;
 		list<Group*> groups = ActorsRepository::get()->getGroups();
 		float length = INFINITY;
 		for (list<Group*>::iterator it = groups.begin();
 			it != groups.end();
 			++it)
 		{
-			if (((*it)->getPosition() - getPosition()).getMagnitude() < length)
+			if (this->group != *it &&
+				((*it)->getPosition() - getPosition()).getMagnitude() < length)
 			{
 				length = ((*it)->getPosition() - getPosition()).getMagnitude();
 				group = *it;
 			}
 		}
+
+		if (group == 0)
+		{
+			setState(EAT);
+			return;
+		}
+
 		destination = group->getPosition();
+		this->group->remove(this);
+		if (this->group->size() == 0) {
+			ActorsRepository::get()->remove(this->group);
+		}
+		group->add(this);
 		this->group = group;
 		nextState = GROUP;
 		setState(MOVE);
@@ -103,6 +114,7 @@ void ElfActor::update(float elapsedTime)
 			AStar astar(this->getPosition(), destination);
 			currentPos = this->getPosition();
 			next = astar.find();
+			foundDestination = true;
 			this->elapsedTime = 0.f;
 		}
 
@@ -113,7 +125,7 @@ void ElfActor::update(float elapsedTime)
 			return;
 		}
 
-		foundDestination = true;
+		foundDestination = false;
 		Position() = next;
 
 		if ((destination - getPosition()).getMagnitude() > 0.01f)

@@ -6,6 +6,7 @@
 
 namespace DatNS
 {
+	class ZergActor;
 	class HunterActor
 		: public Actor
 	{
@@ -15,7 +16,8 @@ namespace DatNS
 			MULTIPLY,
 			LOOK_FOR_FOOD,
 			EAT,
-			MOVE
+			MOVE,
+			NONE
 
 		};
 	private:

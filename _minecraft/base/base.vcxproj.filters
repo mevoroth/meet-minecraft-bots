@@ -451,41 +451,8 @@
     <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletDynamics\ConstraintSolver\btSequentialImpulseConstraintSolver.cpp">
       <Filter>engine\external\bullet</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\ai\BehaviorTree.cpp">
-      <Filter>ai</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ai\ElfSelector.cpp">
-      <Filter>ai</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ai\SelectorFactory.cpp">
-      <Filter>ai</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ai\ZergSelector.cpp">
-      <Filter>ai</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ai\Parasiting.cpp">
-      <Filter>ai</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ai\Parasite.cpp">
-      <Filter>ai</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ai\Multiply.cpp">
-      <Filter>ai</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ai\Condition.cpp">
-      <Filter>ai</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\actors\ActorsRepository.cpp">
       <Filter>actors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ai\AIFactory.cpp">
-      <Filter>ai</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ai\ParasitingCondition.cpp">
-      <Filter>ai</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ai\FindRandomDirection.cpp">
-      <Filter>ai</Filter>
     </ClCompile>
     <ClCompile Include="..\src\actors\ZergActor.cpp">
       <Filter>actors</Filter>
@@ -497,56 +464,23 @@
     <ClCompile Include="..\src\utils\types_extended.cpp">
       <Filter>utils</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\ai\SequenceBehavior.cpp">
-      <Filter>ai</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ai\Find.cpp">
-      <Filter>ai</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ai\Teleport.cpp">
-      <Filter>ai</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\actors\BushActor.cpp">
       <Filter>actors</Filter>
     </ClCompile>
     <ClCompile Include="..\src\actors\HunterActor.cpp">
       <Filter>actors</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\ai\Group.cpp">
-      <Filter>ai</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\actors\GroupActor.cpp">
-      <Filter>actors</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ai\GroupingCondition.cpp">
-      <Filter>ai</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ai\SeparatingCondition.cpp">
-      <Filter>ai</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ai\Separate.cpp">
-      <Filter>ai</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ai\Move.cpp">
-      <Filter>ai</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ai\Eat.cpp">
-      <Filter>ai</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ai\FindBush.cpp">
-      <Filter>ai</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ai\LookAround.cpp">
-      <Filter>ai</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ai\ReproducingCondition.cpp">
-      <Filter>ai</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ai\Eater.cpp">
-      <Filter>ai</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\actors\ElfActor.cpp">
       <Filter>actors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ai\AStar.cpp">
+      <Filter>ai</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\actors\Group.cpp">
+      <Filter>actors</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\_engine\src\engine\utils\types_3d.cpp">
+      <Filter>engine\utils</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -577,6 +511,9 @@
     <Filter Include="utils">
       <UniqueIdentifier>{99e62944-c3f1-4211-ab82-2c82a1f793cc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="engine\utils">
+      <UniqueIdentifier>{0acb6082-167b-40bc-a7a2-54ee4e336251}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\_engine\src\engine\render\renderer.h">
@@ -600,87 +537,15 @@
     <ClInclude Include="..\..\_engine\src\engine\render\camera.h">
       <Filter>engine\render</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\ai\Behavior.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\BehaviorTree.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\Eat.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\ElfSelector.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\Group.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\HunterSelector.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\Move.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\Multiply.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\Seek.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\Selector.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\SelectorFactory.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\Separate.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\Teleport.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\actors\Actor.hpp">
       <Filter>actors</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\ai\ZergSelector.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\Parasiting.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\actors\types.hpp" />
-    <ClInclude Include="..\src\ai\Multiplyable.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\Parasite.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\Condition.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\actors\ActorsRepository.hpp">
       <Filter>actors</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\ai\AIFactory.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\ParasitingCondition.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\actors\ElfActor.hpp">
       <Filter>actors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\SequenceBehavior.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\Find.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\FindRandomDirection.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\RandomDirectionStore.hpp">
-      <Filter>ai</Filter>
     </ClInclude>
     <ClInclude Include="..\src\actors\ZergActor.hpp">
       <Filter>actors</Filter>
@@ -689,63 +554,21 @@
     <ClInclude Include="..\src\utils\types_extended.hpp">
       <Filter>utils</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\ai\SequenceStore.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\CurrentBehavior.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\NewPosition.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\actors\BushActor.hpp">
       <Filter>actors</Filter>
     </ClInclude>
     <ClInclude Include="..\src\actors\HunterActor.hpp">
       <Filter>actors</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\ai\LookAround.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\FindBush.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\SeparatingCondition.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\GroupingCondition.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\ReproducingCondition.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\actors\GroupActor.hpp">
-      <Filter>actors</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\GroupElement.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\Settings.hpp" />
-    <ClInclude Include="..\src\ai\LookAroundState.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\Destination.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\Eater.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\Parasited.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ai\Eatable.hpp">
-      <Filter>ai</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\actors\Group.hpp">
       <Filter>actors</Filter>
     </ClInclude>
     <ClInclude Include="..\src\ai\AStar.hpp">
       <Filter>ai</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\_engine\src\engine\utils\types_3d.h">
+      <Filter>engine\utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

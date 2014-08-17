@@ -13,6 +13,7 @@
   <ItemGroup>
     <ClCompile Include="..\..\_engine\src\engine\log\log.cpp" />
     <ClCompile Include="..\..\_engine\src\engine\render\renderer.cpp" />
+    <ClCompile Include="..\..\_engine\src\engine\utils\types_3d.cpp" />
     <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\BroadphaseCollision\btAxisSweep3.cpp" />
     <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\BroadphaseCollision\btBroadphaseProxy.cpp" />
     <ClCompile Include="..\..\_engine\src\external\bullet\src\BulletCollision\BroadphaseCollision\btCollisionAlgorithm.cpp" />
@@ -164,33 +165,10 @@
     <ClCompile Include="..\src\actors\ActorsRepository.cpp" />
     <ClCompile Include="..\src\actors\BushActor.cpp" />
     <ClCompile Include="..\src\actors\ElfActor.cpp" />
-    <ClCompile Include="..\src\actors\GroupActor.cpp" />
+    <ClCompile Include="..\src\actors\Group.cpp" />
     <ClCompile Include="..\src\actors\HunterActor.cpp" />
     <ClCompile Include="..\src\actors\ZergActor.cpp" />
-    <ClCompile Include="..\src\ai\AIFactory.cpp" />
-    <ClCompile Include="..\src\ai\BehaviorTree.cpp" />
-    <ClCompile Include="..\src\ai\Condition.cpp" />
-    <ClCompile Include="..\src\ai\Eater.cpp" />
-    <ClCompile Include="..\src\ai\ElfSelector.cpp" />
-    <ClCompile Include="..\src\ai\Find.cpp" />
-    <ClCompile Include="..\src\ai\FindBush.cpp" />
-    <ClCompile Include="..\src\ai\FindRandomDirection.cpp" />
-    <ClCompile Include="..\src\ai\Group.cpp" />
-    <ClCompile Include="..\src\ai\GroupingCondition.cpp" />
-    <ClCompile Include="..\src\ai\LookAround.cpp" />
-    <ClCompile Include="..\src\ai\Move.cpp" />
-    <ClCompile Include="..\src\ai\Multiply.cpp" />
-    <ClCompile Include="..\src\ai\Parasite.cpp" />
-    <ClCompile Include="..\src\ai\Parasiting.cpp" />
-    <ClCompile Include="..\src\ai\ParasitingCondition.cpp" />
-    <ClCompile Include="..\src\ai\ReproducingCondition.cpp" />
-    <ClCompile Include="..\src\ai\SelectorFactory.cpp" />
-    <ClCompile Include="..\src\ai\Separate.cpp" />
-    <ClCompile Include="..\src\ai\SeparatingCondition.cpp" />
-    <ClCompile Include="..\src\ai\SequenceBehavior.cpp" />
-    <ClCompile Include="..\src\ai\Eat.cpp" />
-    <ClCompile Include="..\src\ai\Teleport.cpp" />
-    <ClCompile Include="..\src\ai\ZergSelector.cpp" />
+    <ClCompile Include="..\src\ai\AStar.cpp" />
     <ClCompile Include="..\src\basic_physic_engine.cpp" />
     <ClCompile Include="..\src\chunk.cpp" />
     <ClCompile Include="..\src\main.cpp" />
@@ -203,54 +181,16 @@
     <ClInclude Include="..\..\_engine\src\engine\log\log_file.h" />
     <ClInclude Include="..\..\_engine\src\engine\render\camera.h" />
     <ClInclude Include="..\..\_engine\src\engine\render\renderer.h" />
+    <ClInclude Include="..\..\_engine\src\engine\utils\types_3d.h" />
     <ClInclude Include="..\src\actors\Actor.hpp" />
     <ClInclude Include="..\src\actors\ActorsRepository.hpp" />
     <ClInclude Include="..\src\actors\BushActor.hpp" />
     <ClInclude Include="..\src\actors\ElfActor.hpp" />
     <ClInclude Include="..\src\actors\Group.hpp" />
-    <ClInclude Include="..\src\actors\GroupActor.hpp" />
     <ClInclude Include="..\src\actors\HunterActor.hpp" />
     <ClInclude Include="..\src\actors\ZergActor.hpp" />
     <ClInclude Include="..\src\actors\types.hpp" />
-    <ClInclude Include="..\src\ai\AIFactory.hpp" />
     <ClInclude Include="..\src\ai\AStar.hpp" />
-    <ClInclude Include="..\src\ai\Behavior.hpp" />
-    <ClInclude Include="..\src\ai\BehaviorTree.hpp" />
-    <ClInclude Include="..\src\ai\Condition.hpp" />
-    <ClInclude Include="..\src\ai\CurrentBehavior.hpp" />
-    <ClInclude Include="..\src\ai\Destination.hpp" />
-    <ClInclude Include="..\src\ai\Eat.hpp" />
-    <ClInclude Include="..\src\ai\Eatable.hpp" />
-    <ClInclude Include="..\src\ai\Eater.hpp" />
-    <ClInclude Include="..\src\ai\ElfSelector.hpp" />
-    <ClInclude Include="..\src\ai\Find.hpp" />
-    <ClInclude Include="..\src\ai\FindBush.hpp" />
-    <ClInclude Include="..\src\ai\FindRandomDirection.hpp" />
-    <ClInclude Include="..\src\ai\Group.hpp" />
-    <ClInclude Include="..\src\ai\GroupElement.hpp" />
-    <ClInclude Include="..\src\ai\GroupingCondition.hpp" />
-    <ClInclude Include="..\src\ai\HunterSelector.hpp" />
-    <ClInclude Include="..\src\ai\LookAround.hpp" />
-    <ClInclude Include="..\src\ai\LookAroundState.hpp" />
-    <ClInclude Include="..\src\ai\Move.hpp" />
-    <ClInclude Include="..\src\ai\Multiply.hpp" />
-    <ClInclude Include="..\src\ai\Multiplyable.hpp" />
-    <ClInclude Include="..\src\ai\NewPosition.hpp" />
-    <ClInclude Include="..\src\ai\Parasite.hpp" />
-    <ClInclude Include="..\src\ai\Parasited.hpp" />
-    <ClInclude Include="..\src\ai\Parasiting.hpp" />
-    <ClInclude Include="..\src\ai\ParasitingCondition.hpp" />
-    <ClInclude Include="..\src\ai\RandomDirectionStore.hpp" />
-    <ClInclude Include="..\src\ai\ReproducingCondition.hpp" />
-    <ClInclude Include="..\src\ai\Seek.hpp" />
-    <ClInclude Include="..\src\ai\Selector.hpp" />
-    <ClInclude Include="..\src\ai\SelectorFactory.hpp" />
-    <ClInclude Include="..\src\ai\Separate.hpp" />
-    <ClInclude Include="..\src\ai\SeparatingCondition.hpp" />
-    <ClInclude Include="..\src\ai\SequenceBehavior.hpp" />
-    <ClInclude Include="..\src\ai\SequenceStore.hpp" />
-    <ClInclude Include="..\src\ai\Teleport.hpp" />
-    <ClInclude Include="..\src\ai\ZergSelector.hpp" />
     <ClInclude Include="..\src\avatar.h" />
     <ClInclude Include="..\src\basic_physic_engine.h" />
     <ClInclude Include="..\src\chunk.h" />
@@ -321,6 +261,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalOptions>/VERBOSE %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

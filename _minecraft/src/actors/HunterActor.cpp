@@ -10,6 +10,7 @@ using namespace DatNS;
 HunterActor::HunterActor(const NYVert3Df& pos, const NYVert3Df& speed, const NYVert3Df& rotation)
 	: Actor(pos, speed, rotation)
 	, currentState(MULTIPLY)
+	, nextState(NONE)
 	, eaten(0)
 	, parasite(0)
 	, foundDestination(false)
@@ -22,10 +23,44 @@ void HunterActor::update(float elapsedTime)
 	switch (currentState)
 	{
 	case MULTIPLY:
-		ActorsRepository::get()->createElf(*this);
+	{
+		if (eaten < PARASITE_EAT_TO_REPRODUCE)
+		{
+			setState(EAT);
+			return;
+		}
+
+		float length = INFINITY;
+		list<HunterActor*> hunters = ActorsRepository::get()->getHunters();
+		HunterActor* hunter = 0;
+
+		for (list<HunterActor*>::iterator it = hunters.begin();
+			it != hunters.end();
+			++it)
+		{
+			if (((*it)->getPosition() - getPosition()).getMagnitude() < length)
+			{
+				length = ((*it)->getPosition() - getPosition()).getMagnitude();
+				hunter = *it;
+				if (length <= HUNTER_RANGE_TO_REPRODUCE)
+				{
+					break;
+				}
+			}
+		}
+
+		if (length > HUNTER_RANGE_TO_REPRODUCE)
+		{
+			nextState = MULTIPLY;
+			destination = hunter->getPosition();
+			setState(MOVE);
+			return;
+		}
+
+		ActorsRepository::get()->createHunter(*this);
 		eaten = 0;
 		setState(EAT);
-		break;
+	} break;
 	case LOOK_FOR_FOOD:
 	{
 		list<ZergActor*> parasites = ActorsRepository::get()->getParasites();
@@ -41,12 +76,18 @@ void HunterActor::update(float elapsedTime)
 			}
 		}
 
+		destination = parasite->getPosition();
 		setState(length < EAT_RANGE ? EAT : MOVE);
+		if (length < EAT_RANGE)
+		{
+			nextState = EAT;
+		}
 	} break;
 	case EAT:
 		if (!parasite)
 		{
 			setState(LOOK_FOR_FOOD);
+			break;
 		}
 		ActorsRepository::get()->removeParasite(parasite);
 		parasite = 0;
@@ -81,7 +122,7 @@ void HunterActor::update(float elapsedTime)
 			return;
 		}
 
-		setState(EAT);
+		setState(nextState);
 		break;
 	}
 }

@@ -24,3 +24,8 @@ void BushActor::render()
 	glutSolidCube(9);
 	glPopMatrix();
 }
+
+void BushActor::destroy()
+{
+	ActorsRepository::get()->removeBush(this);
+}

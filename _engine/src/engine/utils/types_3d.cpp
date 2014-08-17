@@ -1,5 +1,25 @@
 #include "types_3d.h"
 
+bool operator< (const NYVert3Df& a, const NYVert3Df& vertex)
+{
+	if (a.X < vertex.X)
+	{
+		return true;
+	}
+	if (a.X == vertex.X)
+	{
+		if (a.Y < vertex.Y)
+		{
+			return true;
+		}
+		if (a.Y == vertex.Y && a.Z < vertex.Z)
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
 //Intersection sphère et segment [p1,p2]
 //Attention, part du principe que le segment coupe la sphère en un seul endroit !!!!
 bool interDroiteSphere(float p1x, float p1y, float p1z, float p2x, float p2y, float p2z, float pcx, float pcy, float pcz, float rayon, NYVert3Df & inter)

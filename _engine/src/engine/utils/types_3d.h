@@ -551,7 +551,11 @@ class NYVert3Df
 				return true;
 			return false;
 		}
-		
+		bool operator!= (const NYVert3Df& vertex)
+		{
+			return !operator==(vertex);
+		}
+
 		float getSize(void)
 		{
 			return sqrt(X*X+Y*Y+Z*Z);
@@ -719,6 +723,10 @@ class NYVert3Df
 			*theta = atan2(sqrt(X*X+Y*Y),Z);
 		}
 };
+
+
+bool operator< (const NYVert3Df& a, const NYVert3Df& vertex);
+
 
 class NYPlane
 {

@@ -739,6 +739,7 @@ int main(int argc, char* argv[])
 
 	//Init Timer
 	g_timer = new NYTimer();
+	UniqWorld::get()->setTimer(g_timer);
 	
 	//On start
 	g_timer->start();

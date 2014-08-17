@@ -14,6 +14,9 @@ using namespace std;
 
 namespace DatNS
 {
+	class ZergActor;
+	class HunterActor;
+
 	class ActorsRepository
 	{
 	private:
@@ -40,15 +43,20 @@ namespace DatNS
 		void insert(ZergActor* actor);
 		void insert(BushActor* actor);
 		void insert(ElfActor* actor);
+		void insert(HunterActor* actor);
+		void insert(Group* group);
 
 		Actor* createParasite();
+		Actor* createParasite(const Actor& actor);
 		Actor* createBush();
 		Actor* createElf();
-		Actor* createElf(const Actor& actor);
+		Actor* createElf(Actor& actor);
 		Actor* createHunter();
-		Actor* createParasite(const Actor& actor);
+		Actor* createHunter(const Actor& actor);
+		Group* createGroup();
 		void removeParasite(ZergActor* actor);
 		void removeBush(BushActor* actor);
+		void remove(Group* group);
 
 		list<ElfActor*> getElves();
 		list<ZergActor*> getParasites();

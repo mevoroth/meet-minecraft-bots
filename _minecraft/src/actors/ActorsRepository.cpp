@@ -20,7 +20,6 @@ ActorsRepository* ActorsRepository::get()
 
 void ActorsRepository::reset()
 {
-	ZergActor::reset();
 }
 
 void ActorsRepository::insert(ElfActor* actor)
@@ -36,6 +35,11 @@ void ActorsRepository::insert(BushActor* actor)
 void ActorsRepository::insert(ZergActor* actor)
 {
 	_parasites.push_back(actor);
+}
+
+void ActorsRepository::insert(HunterActor* actor)
+{
+	_hunters.push_back(actor);
 }
 
 Actor* ActorsRepository::createParasite()
@@ -66,6 +70,37 @@ Actor* ActorsRepository::createParasite(const Actor& src)
 	return parasite;
 }
 
+Actor* ActorsRepository::createElf(Actor& src)
+{
+	ElfActor* elf = new ElfActor(
+		src.getPosition(),
+		NYVert3Df(0, 0, 0),
+		src.getForward()
+	);
+	Group* currGroup = dynamic_cast<ElfActor&>(src).getGroup();
+
+	if (currGroup->full())
+	{
+		currGroup = createGroup();
+	}
+
+	elf->setGroup(currGroup);
+
+	insert(elf);
+	return elf;
+}
+
+Actor* ActorsRepository::createHunter(const Actor& src)
+{
+	HunterActor* hunter = new HunterActor(
+		src.getPosition(),
+		NYVert3Df(0, 0, 0),
+		src.getForward()
+		);
+	insert(hunter);
+	return hunter;
+}
+
 void ActorsRepository::removeParasite(ZergActor* actor)
 {
 	_parasites.remove(actor);
@@ -75,6 +110,12 @@ void ActorsRepository::removeBush(BushActor* actor)
 {
 	_bushes.remove(actor);
 	delete actor;
+}
+
+void ActorsRepository::remove(Group* group)
+{
+	_groups.remove(group);
+	delete group;
 }
 
 list<ElfActor*> ActorsRepository::getElves()
@@ -126,10 +167,34 @@ Actor* ActorsRepository::createElf()
 		NYVert3Df(0, 0, 0),
 		FORWARD
 	);
+	Group* g = createGroup();
+	elf->setGroup(g);
+	insert(g);
 	insert(elf);
 	return elf;
 }
+void ActorsRepository::insert(Group* group)
+{
+	_groups.push_back(group);
+}
+Group* ActorsRepository::createGroup()
+{
+	return new Group();
+}
 Actor* ActorsRepository::createHunter()
 {
-	return 0;
+	NYWorld* w = UniqWorld::get()->World();
+	static const int worldsize = MAT_SIZE * NYChunk::CHUNK_SIZE;
+
+	int x = rand() % worldsize;
+	int y = rand() % worldsize;
+
+	HunterActor* hunter = new HunterActor(
+		NYVert3Df(x, y, w->_MatriceHeightsTmp[x][y]),
+		NYVert3Df(0, 0, 0),
+		FORWARD
+		);
+	insert(hunter);
+	return hunter;
 }
+

@@ -20,6 +20,8 @@ namespace DatNS
 	const int PARASITE_EAT_TO_REPRODUCE = 10;
 	const float HUNTER_MOVE_SPEED = 0.001f; // 0.001 px/frame
 	const float SHEEP_VISION = 0.75f;
+	const float SHEEP_VISION_RANGE = 3.f;
+	const float HUNTER_RANGE_TO_REPRODUCE = 5.f;
 }
 
 #endif

@@ -22,6 +22,7 @@ namespace DatNS
 	const float SHEEP_VISION = 0.75f;
 	const float SHEEP_VISION_RANGE = 3.f;
 	const float HUNTER_RANGE_TO_REPRODUCE = 5.f;
+	const float MULTIPLY_COOLDOWN = 10.f;
 }
 
 #endif

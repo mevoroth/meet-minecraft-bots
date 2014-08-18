@@ -14,7 +14,10 @@ ElfActor::ElfActor(const NYVert3Df& pos, const NYVert3Df& speed, const NYVert3Df
 	, currentState(MULTIPLY)
 	, nextState(NONE)
 	, bush(0)
+	, eaten(0)
 	, foundDestination(false)
+	, parasited(false)
+	, elapsedTime(0.f)
 {
 }
 
@@ -38,7 +41,7 @@ void ElfActor::update(float elapsedTime)
 			it != groups.end();
 			++it)
 		{
-			if (this->group != *it &&
+			if (this->group != *it && !(*it)->full() &&
 				((*it)->getPosition() - getPosition()).getMagnitude() < length)
 			{
 				length = ((*it)->getPosition() - getPosition()).getMagnitude();
@@ -93,6 +96,7 @@ void ElfActor::update(float elapsedTime)
 		if (!bush)
 		{
 			setState(LOOK_FOR_BUSH);
+			return;
 		}
 		bush->consume();
 		if (bush->empty())

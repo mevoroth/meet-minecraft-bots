@@ -42,6 +42,8 @@ namespace DatNS
 		void setParasited(bool parasited) { this->parasited = parasited; }
 		void setGroup(Group* group) { this->group = group; this->group->add(this); }
 		Group* getGroup() { return group; }
+		BushActor* getTargetedBush() const { return bush; }
+		void removeBush() { bush = 0; }
 
 	};
 }

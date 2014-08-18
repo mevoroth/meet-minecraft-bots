@@ -78,7 +78,7 @@ void HunterActor::update(float elapsedTime)
 
 		destination = parasite->getPosition();
 		setState(length < EAT_RANGE ? EAT : MOVE);
-		if (length < EAT_RANGE)
+		if (length >= EAT_RANGE)
 		{
 			nextState = EAT;
 		}
@@ -132,7 +132,7 @@ void HunterActor::render()
 	glEnable(GL_LIGHTING);
 	glEnable(GL_COLOR_MATERIAL);
 
-	glColor3f(0.f, 1.f, 0.f);
+	glColor3f(1.f, 0.64453125f, 0.f);
 
 	glPushMatrix();
 	//glMultMatrixf(m);

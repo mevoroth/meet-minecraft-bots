@@ -104,11 +104,29 @@ Actor* ActorsRepository::createHunter(const Actor& src)
 void ActorsRepository::removeParasite(ZergActor* actor)
 {
 	_parasites.remove(actor);
+	for (list<HunterActor*>::iterator it = _hunters.begin();
+		it != _hunters.end();
+		++it)
+	{
+		if ((*it)->getTargetParasite() == actor)
+		{
+			(*it)->removeParasite();
+		}
+	}
 	delete actor;
 }
 void ActorsRepository::removeBush(BushActor* actor)
 {
 	_bushes.remove(actor);
+	for (list<ElfActor*>::iterator it = _elves.begin();
+		it != _elves.end();
+		++it)
+	{
+		if ((*it)->getTargetedBush() == actor)
+		{
+			(*it)->removeBush();
+		}
+	}
 	delete actor;
 }
 

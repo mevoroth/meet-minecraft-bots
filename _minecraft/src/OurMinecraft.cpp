@@ -1,6 +1,7 @@
 #include "OurMinecraft.hpp"
 
 #include "actors\ActorsRepository.hpp"
+#include "engine\log\log.h"
 
 using namespace DatNS;
 
@@ -31,6 +32,16 @@ void DatNS::init()
 void DatNS::update(float elapsed)
 {
 	static int i = 0;
+/*
+	char str[256];
+	sprintf(str, "Iteration : %d\n", i);
+	Log::log(Log::ENGINE_INFO, str);
+
+	if (i == 137)
+	{
+		printf("test\n");
+	}
+*/
 	list<ZergActor*> z = ActorsRepository::get()->getParasites();
 	for (list<ZergActor*>::const_iterator it = z.begin();
 		it != z.end();

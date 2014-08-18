@@ -35,6 +35,8 @@ namespace DatNS
 		virtual void update(float elapsedTime);
 		virtual void render();
 		void setState(HunterState state) { currentState = state; }
+		ZergActor* getTargetParasite() const { return parasite; };
+		void removeParasite() { parasite = 0; };
 	};
 };
 

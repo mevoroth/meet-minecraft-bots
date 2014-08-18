@@ -12,6 +12,10 @@ using namespace DatNS;
 
 ZergActor::ZergActor(const NYVert3Df& pos, const NYVert3Df& speed, const NYVert3Df& fw)
 	: Actor(pos, speed, fw)
+	, currentState(MULTIPLY)
+	, elapsedTime(0.f)
+	, host(0)
+	, foundDestination(false)
 {
 }
 
@@ -21,6 +25,11 @@ void ZergActor::update(float elapsedTime)
 	{
 	case MULTIPLY:
 	{
+		if (host == 0)
+		{
+			setState(LOOK_FOR_HOST);
+			return;
+		}
 		list<ElfActor*> elves = ActorsRepository::get()->getElves();
 		for (list<ElfActor*>::iterator it = elves.begin();
 			it != elves.end();
@@ -35,7 +44,7 @@ void ZergActor::update(float elapsedTime)
 			}
 		}
 
-		if (this->elapsedTime < MULTIPLY)
+		if (this->elapsedTime < MULTIPLY_COOLDOWN)
 		{
 			host->setParasited(true);
 			this->elapsedTime += elapsedTime;
@@ -57,8 +66,8 @@ void ZergActor::update(float elapsedTime)
 		{
 			NYVert3Df distv = (getPosition() - (*it)->getPosition());
 			if (distv.getMagnitude() < dist
-				&& distv.getMagnitude() < SHEEP_VISION_RANGE
-				&& (*it)->getForward().scalProd(distv.normalize()) > SHEEP_VISION)
+				&& distv.getMagnitude() > SHEEP_VISION_RANGE
+				&& (*it)->getForward().scalProd(distv.normalize()) < SHEEP_VISION)
 			{
 				dist = distv.getMagnitude();
 				host = *it;

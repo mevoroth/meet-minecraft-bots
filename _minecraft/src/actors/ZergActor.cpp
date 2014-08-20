@@ -7,6 +7,8 @@
 #include "ActorsRepository.hpp"
 #include "ai\AIFactory.hpp"
 #include "ai\Astar.hpp"
+#include "ElfActor.hpp"
+#include "Settings.hpp"
 
 using namespace DatNS;
 
@@ -60,6 +62,11 @@ void ZergActor::update(float elapsedTime)
 	{
 		float dist = INFINITY;
 		list<ElfActor*> elves = ActorsRepository::get()->getElves();
+		if (!elves.size())
+		{
+			setState(NONE);
+			return;
+		}
 		for (list<ElfActor*>::iterator it = elves.begin();
 			it != elves.end();
 			++it)
@@ -95,6 +102,7 @@ void ZergActor::update(float elapsedTime)
 		{
 			AStar astar(this->getPosition(), destination);
 			currentPos = this->getPosition();
+			astar.canFly(true);
 			next = astar.find();
 			foundDestination = true;
 			this->elapsedTime = 0.f;

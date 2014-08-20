@@ -23,6 +23,7 @@ namespace DatNS
 		map<NYVert3Df, float> _costs;
 		map<NYVert3Df, float> _costsHeuristic;
 		list<NYVert3Df> _seens;
+		bool _canFly;
 
 		void _setCost(const NYVert3Df& neighbor, float cost);
 		NYVert3Df _findClosest() {
@@ -50,6 +51,7 @@ namespace DatNS
 	public:
 		AStar(const NYVert3Df& begin, const NYVert3Df& end);
 		NYVert3Df find();
+		void canFly(bool canFly = false);
 	};
 }
 

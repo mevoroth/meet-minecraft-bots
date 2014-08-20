@@ -2,20 +2,18 @@
 #define _ACTORS_REPOSITORY_HPP_
 
 #include <list>
-#include "Actor.hpp"
-#include "ZergActor.hpp"
-#include "ElfActor.hpp"
-#include "BushActor.hpp"
-#include "HunterActor.hpp"
 
-#include "GroupActor.hpp"
+#include "Actor.hpp"
 
 using namespace std;
 
 namespace DatNS
 {
+	class Group;
 	class ZergActor;
 	class HunterActor;
+	class ElfActor;
+	class BushActor;
 
 	class ActorsRepository
 	{

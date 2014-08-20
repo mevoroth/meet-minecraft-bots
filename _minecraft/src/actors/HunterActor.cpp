@@ -4,6 +4,7 @@
 #include "utils/types_extended.hpp"
 #include "ActorsRepository.hpp"
 #include "ai/AStar.hpp"
+#include "Settings.hpp"
 
 using namespace DatNS;
 
@@ -64,6 +65,11 @@ void HunterActor::update(float elapsedTime)
 	case LOOK_FOR_FOOD:
 	{
 		list<ZergActor*> parasites = ActorsRepository::get()->getParasites();
+		if (!parasites.size())
+		{
+			setState(NONE);
+			return;
+		}
 		float length = INFINITY;
 		for (list<ZergActor*>::iterator it = parasites.begin();
 			it != parasites.end();
@@ -87,7 +93,7 @@ void HunterActor::update(float elapsedTime)
 		if (!parasite)
 		{
 			setState(LOOK_FOR_FOOD);
-			break;
+			return;
 		}
 		ActorsRepository::get()->removeParasite(parasite);
 		parasite = 0;

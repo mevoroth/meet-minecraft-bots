@@ -2,11 +2,11 @@
 #define _ELF_ACTOR_HPP_
 
 #include "Actor.hpp"
-#include "Group.hpp"
 #include "BushActor.hpp"
 
 namespace DatNS
 {
+	class Group;
 	class ElfActor
 		: public Actor
 	{
@@ -40,8 +40,8 @@ namespace DatNS
 		void setState(ElfState state) { currentState = state; }
 		bool isParasited() const { return parasited; }
 		void setParasited(bool parasited) { this->parasited = parasited; }
-		void setGroup(Group* group) { this->group = group; this->group->add(this); }
-		Group* getGroup() { return group; }
+		void setGroup(Group* group);
+		Group* getGroup();
 		BushActor* getTargetedBush() const { return bush; }
 		void removeBush() { bush = 0; }
 

@@ -1,11 +1,13 @@
 #include "Group.hpp"
 
+#include "ElfActor.hpp"
+
 using namespace DatNS;
 
 NYVert3Df Group::getPosition()
 {
 	NYVert3Df p;
-	for (list<Actor*>::iterator it = elements.begin();
+	for (list<ElfActor*>::iterator it = elements.begin();
 		it != elements.end();
 		++it)
 	{
@@ -14,7 +16,14 @@ NYVert3Df Group::getPosition()
 	return p / elements.size();
 }
 
-void Group::remove(Actor* actor)
+void Group::remove(ElfActor* actor)
 {
 	elements.remove(actor);
 }
+
+void Group::add(ElfActor* actor)
+{
+	assert(elements.size() < GROUP_SIZE);
+	Log::log(Log::USER_ERROR, typeid(*actor).name());
+	elements.push_back(actor);
+};

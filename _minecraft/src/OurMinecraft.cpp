@@ -1,6 +1,12 @@
 #include "OurMinecraft.hpp"
 
 #include "actors\ActorsRepository.hpp"
+
+#include "actors\Actor.hpp"
+#include "actors\ZergActor.hpp"
+#include "actors\ElfActor.hpp"
+#include "actors\BushActor.hpp"
+#include "actors\HunterActor.hpp"
 #include "engine\log\log.h"
 
 using namespace DatNS;

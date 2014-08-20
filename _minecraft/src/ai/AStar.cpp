@@ -11,7 +11,13 @@ AStar::AStar(const NYVert3Df& begin, const NYVert3Df& end)
 {
 	_start = begin;
 	_end = end;
+	_canFly = false;
 	_setCost(begin, 0);
+}
+
+void AStar::canFly(bool canFly)
+{
+	_canFly = canFly;
 }
 
 NYVert3Df AStar::find()
@@ -77,30 +83,55 @@ void AStar::_setParents(const NYVert3Df& a, const NYVert3Df& b)
 list<NYVert3Df> AStar::_neighbors(const NYVert3Df& o)
 {
 	list<NYVert3Df> neighbors;
-	if (!UniqWorld::get()->World()->getCube(o.X - 1, o.Y, o.Z)->isSolid())
-	{
-		neighbors.push_back(NYVert3Df(o.X - 1, o.Y, o.Z));
-	}
-	if (!UniqWorld::get()->World()->getCube(o.X + 1, o.Y, o.Z)->isSolid())
-	{
-		neighbors.push_back(NYVert3Df(o.X + 1, o.Y, o.Z));
-	}
-	if (!UniqWorld::get()->World()->getCube(o.X, o.Y - 1, o.Z)->isSolid())
-	{
-		neighbors.push_back(NYVert3Df(o.X, o.Y - 1, o.Z));
-	}
-	if (!UniqWorld::get()->World()->getCube(o.X, o.Y + 1, o.Z)->isSolid())
-	{
-		neighbors.push_back(NYVert3Df(o.X, o.Y + 1, o.Z));
-	}
-	if (!UniqWorld::get()->World()->getCube(o.X, o.Y, o.Z - 1)->isSolid())
+	NYWorld* w = UniqWorld::get()->World();
+
+	if (!w->getCube(o.X, o.Y, o.Z - 1)->isSolid() && !w->getCube(o.X, o.Y, o.Z - 2)->isSolid() && !_canFly)
 	{
 		neighbors.push_back(NYVert3Df(o.X, o.Y, o.Z - 1));
 	}
-	if (!UniqWorld::get()->World()->getCube(o.X, o.Y, o.Z + 1)->isSolid())
+	else
 	{
-		neighbors.push_back(NYVert3Df(o.X, o.Y, o.Z + 1));
+		bool wall = false;
+		if (!w->getCube(o.X - 1, o.Y, o.Z)->isSolid())
+		{
+			neighbors.push_back(NYVert3Df(o.X - 1, o.Y, o.Z));
+		}
+		else
+		{
+			wall = true;
+		}
+		if (!w->getCube(o.X + 1, o.Y, o.Z)->isSolid())
+		{
+			neighbors.push_back(NYVert3Df(o.X + 1, o.Y, o.Z));
+		}
+		else
+		{
+			wall = true;
+		}
+		if (!w->getCube(o.X, o.Y - 1, o.Z)->isSolid())
+		{
+			neighbors.push_back(NYVert3Df(o.X, o.Y - 1, o.Z));
+		}
+		else
+		{
+			wall = true;
+		}
+		if (!w->getCube(o.X, o.Y + 1, o.Z)->isSolid())
+		{
+			neighbors.push_back(NYVert3Df(o.X, o.Y + 1, o.Z));
+		}
+		else
+		{
+			wall = true;
+		}
+
+		if (!w->getCube(o.X, o.Y, o.Z + 1)->isSolid())
+		{
+			if (_canFly || wall)
+				neighbors.push_back(NYVert3Df(o.X, o.Y, o.Z + 1));
+		}
 	}
+
 	return neighbors;
 }
 

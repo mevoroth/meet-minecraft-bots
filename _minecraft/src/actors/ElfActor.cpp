@@ -1,11 +1,12 @@
 #include "ElfActor.hpp"
-
+#include <typeinfo.h>
 #include "gl/glew.h"
 #include "gl/glut.h"
 #include "Settings.hpp"
 #include "ActorsRepository.hpp"
 #include "ai/AStar.hpp"
 #include "utils/types_extended.hpp"
+#include "Group.hpp"
 
 using namespace DatNS;
 
@@ -68,6 +69,11 @@ void ElfActor::update(float elapsedTime)
 	case LOOK_FOR_BUSH:
 	{
 		list<BushActor*> bushes = ActorsRepository::get()->getBushes();
+		if (!bushes.size())
+		{
+			setState(NONE);
+			return;
+		}
 		float length = INFINITY;
 		for (list<BushActor*>::iterator it = bushes.begin();
 			it != bushes.end();
@@ -142,18 +148,29 @@ void ElfActor::update(float elapsedTime)
 		break;
 	case MULTIPLY:
 	{
+		//Log::log(Log::USER_ERROR, "MULTIPLY");
 		if (group->size() == 1)
 		{
 			setState(GROUP);
 			return;
 		}
 		int unparasited = 0;
-		list<Actor*> actors = group->getElements();
-		for (list<Actor*>::iterator it = actors.begin();
+		list<ElfActor*> actors = group->getElements();
+		//Log::log(Log::USER_ERROR, "COUILLE");
+
+		//Log::log(Log::USER_ERROR, "SIZE");
+
+		//Log::log(Log::USER_ERROR, toString(actors.size()).c_str());
+		for (list<ElfActor*>::const_iterator it = actors.begin();
 			it != actors.end();
 			++it)
 		{
-			if (!dynamic_cast<ElfActor*>(*it)->isParasited())
+			//char couille[256];
+			//sprintf(couille, "couille %x", *it);
+			//Log::log(Log::USER_ERROR, "vraie couille");
+			//Log::log(Log::USER_ERROR, couille);
+			////Log::log(Log::USER_ERROR, typeid(*it).name());
+			if (!(*it)->isParasited())
 			{
 				++unparasited;
 				if (unparasited == 2)
@@ -186,4 +203,14 @@ void ElfActor::render()
 	glTranslatef(Position().X * 10 + 5, Position().Y * 10 + 5, Position().Z * 10 + 5);
 	glutSolidCube(9);
 	glPopMatrix();
+}
+
+void ElfActor::setGroup(Group* group)
+{
+	this->group = group;
+}
+
+Group* ElfActor::getGroup()
+{
+	return group;
 }

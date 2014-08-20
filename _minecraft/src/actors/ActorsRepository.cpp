@@ -2,6 +2,11 @@
 
 #include "utils\types_extended.hpp"
 
+#include "ZergActor.hpp"
+#include "ElfActor.hpp"
+#include "BushActor.hpp"
+#include "HunterActor.hpp"
+#include "Group.hpp"
 #include <exception>
 
 using namespace DatNS;
@@ -85,6 +90,7 @@ Actor* ActorsRepository::createElf(Actor& src)
 	}
 
 	elf->setGroup(currGroup);
+	currGroup->add(elf);
 
 	insert(elf);
 	return elf;
@@ -132,6 +138,10 @@ void ActorsRepository::removeBush(BushActor* actor)
 
 void ActorsRepository::remove(Group* group)
 {
+	if (group->size())
+	{
+		Log::log(Log::USER_ERROR, "GROUP NOT EMPTY");
+	}
 	_groups.remove(group);
 	delete group;
 }
@@ -187,6 +197,7 @@ Actor* ActorsRepository::createElf()
 	);
 	Group* g = createGroup();
 	elf->setGroup(g);
+	g->add(elf);
 	insert(g);
 	insert(elf);
 	return elf;

@@ -19,7 +19,8 @@ namespace DatNS
 		{
 			MULTIPLY,
 			LOOK_FOR_HOST,
-			TELEPORT
+			TELEPORT,
+			NONE
 		};
 	private:
 		ZergState currentState;

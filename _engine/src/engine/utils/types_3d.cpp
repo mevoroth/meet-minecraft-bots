@@ -87,3 +87,8 @@ bool interDroiteSphere(float p1x, float p1y, float p1z, float p2x, float p2y, fl
 	return false;
 }
 
+
+void calcNormale(NYVert3Df & vec1, NYVert3Df & vec2, NYVert3Df & normale)
+{
+	normale = vec1.vecProd(vec2).normalize();
+}

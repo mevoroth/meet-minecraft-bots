@@ -23,6 +23,13 @@ ZergActor::ZergActor(const NYVert3Df& pos, const NYVert3Df& speed, const NYVert3
 
 void ZergActor::update(float elapsedTime)
 {
+	static float noflick = 0.f;
+	noflick += elapsedTime;
+	if (noflick < ACTION_PER_SEC)
+	{
+		return;
+	}
+	noflick = 0.f;
 	switch (currentState)
 	{
 	case MULTIPLY:
@@ -104,6 +111,7 @@ void ZergActor::update(float elapsedTime)
 			currentPos = this->getPosition();
 			astar.canFly(true);
 			next = astar.find();
+			Forward() = (next - currentPos).normalize();
 			foundDestination = true;
 			this->elapsedTime = 0.f;
 		}
@@ -128,6 +136,58 @@ void ZergActor::update(float elapsedTime)
 	}
 }
 
+
+static float angleY(NYVert3Df & moiV, NYVert3Df & vertex)
+{
+	NYVert3Df moi(moiV.X, 0, moiV.Z);
+	moi.normalize();
+	NYVert3Df lui(vertex.X, 0, vertex.Z);
+	lui.normalize();
+
+	float cosAng = moi.X*lui.X + moi.Z*lui.Z;
+	NYVert3Df normale;
+	calcNormale(vertex, moi, normale);
+
+	float res = acos(cosAng);
+	if (isNaN(res))
+	{
+		if (cosAng > 0.5f)
+			res = 0.0f;
+		else
+			res = 3.14159f;
+	}
+
+	if (normale.Y >= 0)
+		return -res;
+
+	return res;
+}
+
+static float angleZ(NYVert3Df & moiV, NYVert3Df & vertex)
+{
+	NYVert3Df moi(moiV.X, moiV.Y, 0);
+	moi.normalize();
+	NYVert3Df lui(vertex.X, vertex.Y, 0);
+	lui.normalize();
+
+	float cosAng = moi.X*lui.X + moi.Y*lui.Y;
+	NYVert3Df normale;
+	calcNormale(vertex, moi, normale);
+
+	float res = acos(cosAng);
+	if (isNaN(res))
+	{
+		if (cosAng > 0.5f)
+			res = 0.0f;
+		else
+			res = 3.14159f;
+	}
+
+	if (normale.Z >= 0)
+		return -res;
+
+	return res;
+}
 void ZergActor::render()
 {
 	glEnable(GL_LIGHTING);
@@ -137,6 +197,8 @@ void ZergActor::render()
 
 	glPushMatrix();
 	//glMultMatrixf(m);
+	glRotatef(angleZ(NYVert3Df(FORWARD), getForward()), 0, 0, 1);
+	glRotatef(angleY(NYVert3Df(FORWARD), getForward()), 0, 1, 0);
 	glTranslatef(Position().X * 10 + 5, Position().Y * 10 + 5, Position().Z * 10 + 5);
 	glutSolidCube(9);
 	glPopMatrix();

@@ -21,6 +21,13 @@ HunterActor::HunterActor(const NYVert3Df& pos, const NYVert3Df& speed, const NYV
 
 void HunterActor::update(float elapsedTime)
 {
+	static float noflick = 0.f;
+	noflick += elapsedTime;
+	if (noflick < ACTION_PER_SEC)
+	{
+		return;
+	}
+	noflick = 0.f;
 	switch (currentState)
 	{
 	case MULTIPLY:
@@ -110,6 +117,7 @@ void HunterActor::update(float elapsedTime)
 			AStar astar(this->getPosition(), destination);
 			currentPos = this->getPosition();
 			next = astar.find();
+			Forward() = (next - currentPos).normalize();
 			this->elapsedTime = 0.f;
 		}
 

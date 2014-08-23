@@ -24,6 +24,13 @@ ElfActor::ElfActor(const NYVert3Df& pos, const NYVert3Df& speed, const NYVert3Df
 
 void ElfActor::update(float elapsedTime)
 {
+	static float noflick = 0.f;
+	noflick += elapsedTime;
+	if (noflick < ACTION_PER_SEC)
+	{
+		return;
+	}
+	noflick = 0.f;
 	switch (currentState)
 	{
 	case GROUP:
@@ -68,6 +75,14 @@ void ElfActor::update(float elapsedTime)
 	} break;
 	case LOOK_FOR_BUSH:
 	{
+		if (nextState != LOOK_FOR_BUSH)
+		{
+			setState(STARE);
+			nextState = LOOK_FOR_BUSH;
+			this->elapsedTime = 0.f;
+			return;
+		}
+		nextState = NONE;
 		list<BushActor*> bushes = ActorsRepository::get()->getBushes();
 		if (!bushes.size())
 		{
@@ -97,8 +112,23 @@ void ElfActor::update(float elapsedTime)
 		}
 	} break;
 	case STARE:
+		Forward().rotate(NYVert3Df(UP), sin(this->elapsedTime)*M_PI_4*STARE_SPEED_SHEEP);
+		this->elapsedTime += elapsedTime;
+		if (this->elapsedTime >= 1.f)
+		{
+			this->elapsedTime = 0.f;
+			currentState = nextState;
+		}
 		break;
 	case EAT:
+		if (nextState != EAT)
+		{
+			setState(STARE);
+			nextState = EAT;
+			this->elapsedTime = 0.f;
+			return;
+		}
+		nextState = NONE;
 		if (!bush)
 		{
 			setState(LOOK_FOR_BUSH);
@@ -124,6 +154,7 @@ void ElfActor::update(float elapsedTime)
 			AStar astar(this->getPosition(), destination);
 			currentPos = this->getPosition();
 			next = astar.find();
+			Forward() = (next - currentPos).normalize();
 			foundDestination = true;
 			this->elapsedTime = 0.f;
 		}
@@ -148,7 +179,6 @@ void ElfActor::update(float elapsedTime)
 		break;
 	case MULTIPLY:
 	{
-		//Log::log(Log::USER_ERROR, "MULTIPLY");
 		if (group->size() == 1)
 		{
 			setState(GROUP);
@@ -156,20 +186,10 @@ void ElfActor::update(float elapsedTime)
 		}
 		int unparasited = 0;
 		list<ElfActor*> actors = group->getElements();
-		//Log::log(Log::USER_ERROR, "COUILLE");
-
-		//Log::log(Log::USER_ERROR, "SIZE");
-
-		//Log::log(Log::USER_ERROR, toString(actors.size()).c_str());
 		for (list<ElfActor*>::const_iterator it = actors.begin();
 			it != actors.end();
 			++it)
 		{
-			//char couille[256];
-			//sprintf(couille, "couille %x", *it);
-			//Log::log(Log::USER_ERROR, "vraie couille");
-			//Log::log(Log::USER_ERROR, couille);
-			////Log::log(Log::USER_ERROR, typeid(*it).name());
 			if (!(*it)->isParasited())
 			{
 				++unparasited;

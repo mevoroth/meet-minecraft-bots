@@ -5,9 +5,15 @@
 
 namespace DatNS
 {
+	/**
+	 * Condition in behavior tree
+	 */
 	class Condition : public Behavior
 	{
 	protected:
+		/**
+		 * Override this to create condition for behavior
+		 */
 		virtual bool _execute_condition(Actor& actor, float elapsedTime) const = 0;
 	public:
 		/**

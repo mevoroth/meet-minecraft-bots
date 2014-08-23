@@ -10,10 +10,10 @@ namespace DatNS
 	public:
 		enum ReturnCode
 		{
-			DOING,
-			FINISHED,
-			ABORT,
-			INVALID
+			DOING,		// Behavior is executing
+			FINISHED,	// Behavior is done
+			ABORT,		// Behavior failed (cant perform behavior)
+			INVALID		// Behavior failed (internal error)
 		};
 		/**
 		 * Tick

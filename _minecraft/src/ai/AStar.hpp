@@ -49,8 +49,19 @@ namespace DatNS
 		}
 		void _setParents(const NYVert3Df& a, const NYVert3Df& b);
 	public:
+		/**
+		 * Init AStar
+		 * @param[in] begin position
+		 * @param[in] destination
+		 */
 		AStar(const NYVert3Df& begin, const NYVert3Df& end);
+		/**
+		 * Find next position
+		 */
 		NYVert3Df find();
+		/**
+		 * Set whether actor can fly
+		 */
 		void canFly(bool canFly = false);
 	};
 }

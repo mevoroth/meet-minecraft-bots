@@ -24,6 +24,5 @@ void Group::remove(ElfActor* actor)
 void Group::add(ElfActor* actor)
 {
 	assert(elements.size() < GROUP_SIZE);
-	Log::log(Log::USER_ERROR, typeid(*actor).name());
 	elements.push_back(actor);
 };

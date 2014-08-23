@@ -138,10 +138,6 @@ void ActorsRepository::removeBush(BushActor* actor)
 
 void ActorsRepository::remove(Group* group)
 {
-	if (group->size())
-	{
-		Log::log(Log::USER_ERROR, "GROUP NOT EMPTY");
-	}
 	_groups.remove(group);
 	delete group;
 }

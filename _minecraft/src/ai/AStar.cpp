@@ -85,51 +85,56 @@ list<NYVert3Df> AStar::_neighbors(const NYVert3Df& o)
 	list<NYVert3Df> neighbors;
 	NYWorld* w = UniqWorld::get()->World();
 
-	if (!w->getCube(o.X, o.Y, o.Z - 1)->isSolid() && !w->getCube(o.X, o.Y, o.Z - 2)->isSolid() && !_canFly)
+	if (!w->getCube(o.X, o.Y, o.Z - 1)->isSolid())
 	{
 		neighbors.push_back(NYVert3Df(o.X, o.Y, o.Z - 1));
+		if (!(w->getCube(o.X, o.Y, o.Z - 2)->isSolid() || _canFly))
+		{
+			return neighbors;
+		}
+	}
+	bool wall = false;
+	if (!w->getCube(o.X - 1, o.Y, o.Z)->isSolid())
+	{
+		if (w->getCube(o.X - 1, o.Y, o.Z - 1)->isSolid() || _canFly)
+			neighbors.push_back(NYVert3Df(o.X - 1, o.Y, o.Z));
 	}
 	else
 	{
-		bool wall = false;
-		if (!w->getCube(o.X - 1, o.Y, o.Z)->isSolid())
-		{
-			neighbors.push_back(NYVert3Df(o.X - 1, o.Y, o.Z));
-		}
-		else
-		{
-			wall = true;
-		}
-		if (!w->getCube(o.X + 1, o.Y, o.Z)->isSolid())
-		{
+		wall = true;
+	}
+	if (!w->getCube(o.X + 1, o.Y, o.Z)->isSolid())
+	{
+		if (w->getCube(o.X + 1, o.Y, o.Z - 1)->isSolid() || _canFly)
 			neighbors.push_back(NYVert3Df(o.X + 1, o.Y, o.Z));
-		}
-		else
-		{
-			wall = true;
-		}
-		if (!w->getCube(o.X, o.Y - 1, o.Z)->isSolid())
-		{
+	}
+	else
+	{
+		wall = true;
+	}
+	if (!w->getCube(o.X, o.Y - 1, o.Z)->isSolid())
+	{
+		if (w->getCube(o.X, o.Y - 1, o.Z - 1)->isSolid() || _canFly)
 			neighbors.push_back(NYVert3Df(o.X, o.Y - 1, o.Z));
-		}
-		else
-		{
-			wall = true;
-		}
-		if (!w->getCube(o.X, o.Y + 1, o.Z)->isSolid())
-		{
+	}
+	else
+	{
+		wall = true;
+	}
+	if (!w->getCube(o.X, o.Y + 1, o.Z)->isSolid())
+	{
+		if (w->getCube(o.X, o.Y + 1, o.Z - 1)->isSolid() || _canFly)
 			neighbors.push_back(NYVert3Df(o.X, o.Y + 1, o.Z));
-		}
-		else
-		{
-			wall = true;
-		}
+	}
+	else
+	{
+		wall = true;
+	}
 
-		if (!w->getCube(o.X, o.Y, o.Z + 1)->isSolid())
-		{
-			if (_canFly || wall)
-				neighbors.push_back(NYVert3Df(o.X, o.Y, o.Z + 1));
-		}
+	if (!w->getCube(o.X, o.Y, o.Z + 1)->isSolid())
+	{
+		if (_canFly || wall)
+			neighbors.push_back(NYVert3Df(o.X, o.Y, o.Z + 1));
 	}
 
 	return neighbors;

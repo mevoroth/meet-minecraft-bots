@@ -118,20 +118,28 @@ void HunterActor::update(float elapsedTime)
 			currentPos = this->getPosition();
 			next = astar.find();
 			Forward() = (next - currentPos).normalize();
+			foundDestination = true;
 			this->elapsedTime = 0.f;
 		}
 
-		if ((next - getPosition()).getMagnitude() > 0.01f)
+		if (this->elapsedTime <= 1.f)
 		{
 			Position() = lerp(currentPos, next, this->elapsedTime);
 			this->elapsedTime += elapsedTime * HUNTER_MOVE_SPEED;
 			return;
 		}
 
-		foundDestination = true;
+		foundDestination = false;
 		Position() = next;
+		currentPos = this->getPosition();
+		this->elapsedTime = 0.f;
 
-		if ((destination - getPosition()).getMagnitude() > 0.01f)
+		NYVert3Df dest(destination);
+		dest.Z = 0.f;
+		NYVert3Df pos(getPosition());
+		pos.Z = 0.f;
+
+		if ((dest - pos).getMagnitude() > 0.01f)
 		{
 			return;
 		}
@@ -150,7 +158,10 @@ void HunterActor::render()
 
 	glPushMatrix();
 	//glMultMatrixf(m);
-	glTranslatef(Position().X * 10 + 5, Position().Y * 10 + 5, Position().Z * 10 + 5);
+	glRotatef(NYVert3Df(FORWARD).angleZ(getForward()), 0, 0, 1);
+	glRotatef(NYVert3Df(FORWARD).angleY(getForward()), 0, 1, 0);
+	glTranslatef(Position().X * 10 + 5, Position().Y * 10 + 5, Position().Z * 10 - 5);
 	glutSolidCube(9);
 	glPopMatrix();
 }
+;

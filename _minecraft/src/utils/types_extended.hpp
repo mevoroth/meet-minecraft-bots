@@ -41,10 +41,13 @@ template <typename T> T clamp(T a, T m, T M)
 	}
 }
 
-template <typename T> T lerp(T a, T b, float t)
-{
-	t = clamp<float>(t, 0, 1);
-	return (a - b) * t + b;
-}
+//template <typename T> T lerp(const T& a, const T& b, float t)
+//{
+//	t = clamp<float>(t, 0, 1);
+//	//return a * t + b * (1 - t);
+//	return (a - b) * t + b;
+//}
+
+NYVert3Df lerp(const NYVert3Df& a, const NYVert3Df& b, float t);
 
 #endif

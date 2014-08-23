@@ -116,15 +116,10 @@ void ZergActor::update(float elapsedTime)
 			this->elapsedTime = 0.f;
 		}
 
-		if ((next - getPosition()).getMagnitude() > 0.01f)
-		{
-			Position() = lerp(currentPos, next, this->elapsedTime);
-			this->elapsedTime += elapsedTime * SHEEP_MOVE_SPEED;
-			return;
-		}
-
 		foundDestination = false;
 		Position() = next;
+		currentPos = this->getPosition();
+		this->elapsedTime = 0.f;
 
 		if ((destination - getPosition()).getMagnitude() > 0.01f)
 		{
@@ -136,58 +131,6 @@ void ZergActor::update(float elapsedTime)
 	}
 }
 
-
-static float angleY(NYVert3Df & moiV, NYVert3Df & vertex)
-{
-	NYVert3Df moi(moiV.X, 0, moiV.Z);
-	moi.normalize();
-	NYVert3Df lui(vertex.X, 0, vertex.Z);
-	lui.normalize();
-
-	float cosAng = moi.X*lui.X + moi.Z*lui.Z;
-	NYVert3Df normale;
-	calcNormale(vertex, moi, normale);
-
-	float res = acos(cosAng);
-	if (isNaN(res))
-	{
-		if (cosAng > 0.5f)
-			res = 0.0f;
-		else
-			res = 3.14159f;
-	}
-
-	if (normale.Y >= 0)
-		return -res;
-
-	return res;
-}
-
-static float angleZ(NYVert3Df & moiV, NYVert3Df & vertex)
-{
-	NYVert3Df moi(moiV.X, moiV.Y, 0);
-	moi.normalize();
-	NYVert3Df lui(vertex.X, vertex.Y, 0);
-	lui.normalize();
-
-	float cosAng = moi.X*lui.X + moi.Y*lui.Y;
-	NYVert3Df normale;
-	calcNormale(vertex, moi, normale);
-
-	float res = acos(cosAng);
-	if (isNaN(res))
-	{
-		if (cosAng > 0.5f)
-			res = 0.0f;
-		else
-			res = 3.14159f;
-	}
-
-	if (normale.Z >= 0)
-		return -res;
-
-	return res;
-}
 void ZergActor::render()
 {
 	glEnable(GL_LIGHTING);
@@ -197,9 +140,9 @@ void ZergActor::render()
 
 	glPushMatrix();
 	//glMultMatrixf(m);
-	glRotatef(angleZ(NYVert3Df(FORWARD), getForward()), 0, 0, 1);
-	glRotatef(angleY(NYVert3Df(FORWARD), getForward()), 0, 1, 0);
-	glTranslatef(Position().X * 10 + 5, Position().Y * 10 + 5, Position().Z * 10 + 5);
+	glRotatef(NYVert3Df(FORWARD).angleZ(getForward()), 0, 0, 1);
+	glRotatef(NYVert3Df(FORWARD).angleY(getForward()), 0, 1, 0);
+	glTranslatef(Position().X * 10 + 5, Position().Y * 10 + 5, Position().Z * 10 - 5);
 	glutSolidCube(9);
 	glPopMatrix();
 }

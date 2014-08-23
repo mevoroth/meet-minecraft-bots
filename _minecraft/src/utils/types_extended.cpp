@@ -18,3 +18,9 @@ UniqWorld* UniqWorld::get()
 	}
 	return instance;
 }
+
+NYVert3Df lerp(const NYVert3Df& a, const NYVert3Df& b, float t)
+{
+	t = clamp<float>(t, 0, 1);
+	return (NYVert3Df(a) - b) * t + b;
+}

@@ -84,11 +84,6 @@ void ElfActor::update(float elapsedTime)
 		}
 		nextState = NONE;
 		list<BushActor*> bushes = ActorsRepository::get()->getBushes();
-		if (!bushes.size())
-		{
-			setState(NONE);
-			return;
-		}
 		float length = INFINITY;
 		for (list<BushActor*>::iterator it = bushes.begin();
 			it != bushes.end();
@@ -121,6 +116,13 @@ void ElfActor::update(float elapsedTime)
 		}
 		break;
 	case EAT:
+	{
+		list<BushActor*> bushes = ActorsRepository::get()->getBushes();
+		if (!bushes.size())
+		{
+			setState(NONE);
+			return;
+		}
 		if (nextState != EAT)
 		{
 			setState(STARE);
@@ -146,7 +148,7 @@ void ElfActor::update(float elapsedTime)
 		{
 			setState(MULTIPLY);
 		}
-		break;
+	} break;
 	case MOVE:
 		// A*
 		if (!foundDestination)
@@ -159,7 +161,7 @@ void ElfActor::update(float elapsedTime)
 			this->elapsedTime = 0.f;
 		}
 
-		if ((next - getPosition()).getMagnitude() > 0.01f)
+		if (this->elapsedTime <= 1.f)
 		{
 			Position() = lerp(currentPos, next, this->elapsedTime);
 			this->elapsedTime += elapsedTime * SHEEP_MOVE_SPEED;
@@ -168,6 +170,8 @@ void ElfActor::update(float elapsedTime)
 
 		foundDestination = false;
 		Position() = next;
+		currentPos = this->getPosition();
+		this->elapsedTime = 0.f;
 
 		if ((destination - getPosition()).getMagnitude() > 0.01f)
 		{
@@ -182,6 +186,11 @@ void ElfActor::update(float elapsedTime)
 		if (group->size() == 1)
 		{
 			setState(GROUP);
+			return;
+		}
+		if (eaten < SHEEP_EAT_TO_REPRODUCE)
+		{
+			setState(EAT);
 			return;
 		}
 		int unparasited = 0;
@@ -220,7 +229,9 @@ void ElfActor::render()
 
 	glPushMatrix();
 	//glMultMatrixf(m);
-	glTranslatef(Position().X * 10 + 5, Position().Y * 10 + 5, Position().Z * 10 + 5);
+	glRotatef(NYVert3Df(FORWARD).angleZ(getForward()), 0, 0, 1);
+	glRotatef(NYVert3Df(FORWARD).angleY(getForward()), 0, 1, 0);
+	glTranslatef(getPosition().X * 10 + 5, getPosition().Y * 10 + 5, getPosition().Z * 10 - 5);
 	glutSolidCube(9);
 	glPopMatrix();
 }
